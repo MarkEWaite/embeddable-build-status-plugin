@@ -1,256 +1,146 @@
-# Embeddable Build Status Plugin
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Query Parameters](#query-parameters)
-- [Parameter Resolver](#parameter-resolver)
-- [Pipeline (DSL)](#pipeline-dsl)
-- [Text variant](#text-variant)
-- [Extension points for plugin developers](#extension-points-for-plugin-developers)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-This plugin provides customizable badges (similar to [shields.io](https://shields.io)) to any website.
-A [text variant](#text-variant) is also available that returns the build status as text.
-
-For each variant there are two URLs available for inclusion:
-- **protected** exposes the badge to users having at least `Read` permission on the job:
-
-  Example: \
-  `http://<jenkinsroot>/path/to/job/badge/icon?...` <small>(for jobs)</small> \
-  `http://<jenkinsroot>/path/to/job/<buildNumber>/badge/icon?...` <small></small>(for builds)
-
-  If you omit any query parameter the default badge for the job/build will be returned:
-
-  ![Badge](src/doc/flat_unconfigured.svg "Badge")
-
-- **unprotected**  exposes the badge to users having at least `ViewStatus` permission on the job
-
-  Example: `http://<jenkinsroot>/buildStatus?...`
-
-  To select a specific job and build use the query parameters [job](#job) and [build](#build)
-
-Customization can be done via query parameters.
-
-## Query Parameters
-### `style`
-Four badge types are supported by the badge variant:
-#### *plastic*
-![Badge](src/doc/plastic_unconfigured.svg "Badge") (default)
-
-![Customized Badge](src/doc/plastic_configured.svg "Customized Badge") (customized)
-
-#### *flat* (default)
-![Badge](src/doc/flat_unconfigured.svg "Badge") (default)
-
-![Customized Badge](src/doc/flat_configured.svg "Customized Badge") (customized)
-
-#### *flat-square*
-![Badge](src/doc/flat-square_unconfigured.svg "Badge") (default)
-
-![Customized Badge](src/doc/flat-square_configured.svg "Customized Badge") (customized)
-
-#### *ball-&lt;size&gt;*
-This style returns the standard Jenkins "balls".
-
-Supported sizes are: `16x16`, `24x24`, `32x32` and `48x48` (and probably more... just try).
-
-*Examples:* `ball-16x16` or `ball-32x32`
-
-**Note:** If you are using this style **all other query parameters** will have **no effect**.
-
-### `config`
-You can add pre-customized badge configurations via pipeline script (see **"DSL"** below).
-
-### `subject` and `status`
-The customized examples above uses the following query parameters:
-
-`?subject=Custom Text&status=My passing text`
-
-### `color` and `animatedOverlayColor`
-
-You can override the color using the following valid color values:
-- one of the values: `red`, `brightgreen`, `green`, `yellowgreen`, `yellow`, `orange`, `lightgrey`, `blue`
-- a valid hexadecimal HTML RGB color <strong>without</strong> the hashtag (e.g. `FFAABB`).
-- any valid [SVG color name](https://www.december.com/html/spec/colorsvg.html)
-
-### `job`
-**Note: This parameter is only supported for the unprotected URL!**
-
-The path for the selected job **or**
-any selector implemented via `JobSelectorExtensionPoint`
-
-If you omit this parameter you can customize any "untethered" badge you like.
-
-**Important**
-
-The job selector string **must** be URL escaped. \
-If you are using <strong>Multibranch Pipelines</strong> the <strong>branch</strong> within the selector needs to be URL encoded <strong>twice</strong>.
-
-*Example* \
-<code>?job=path/to/job/branch/path</code> <strong>&#10060;</strong> \
-would become\
-<code>?job=path%2Fto%2Fjob%2Fbranch<strong>%252F</strong>path</code> <strong>&#10004;</strong>
-
-### `build`
-
-Select the build.
-This parameter is supported for the protected **and** unprotected URL!
-For the unprotected URL use the [job](#job) parameter is also required!
-
-#### *Selectors*
-Allowed selectors are:
-
-- Build-ID (`integer`)
-- relative negative Build-Index (`0` = last, `-1` = previous, `-2` ...)
-- Selector via the following Rule:
-
-  `(last|first)[Failed|Successful|Unsuccessful|Stable|Unstable|Completed][:${params.<BuildParamerName>=<BuildParameterValue>}]`
-
-  - `(...)` is required
-  - `[...]` is optional
-
-  Examples:
-  - `last`
-  - `first`
-  - `lastStable`
-  - `firstCompleted`
-  - `lastSuccessful:${params.BRANCH=master}`
-
-#### *Concatenation*
-
-All those selectors can be concatenated as comma separated list:
-
-`build=last,-10,firstSuccessful:${params.BRANCH=master}`
-
-This searches in the last `10` runs for the first successful build of the `master` branch (provided the Build Parameter `BRANCH` exists).
-
-**Note:** If you are using <strong>Multibranch Pipelines</strong> the <strong>branch name</strong> within the selector needs to be URL encoded twice (see [job](#job) for further information).
-
-### `link`
-
-Provide a link to be opened on clicking on the badge.
-
-## Parameter Resolver
-
-The query parameters `subject`, `status`, `color`, `animatedOverlayColor` and `link` support the usage of variables like `?subject=Build ${variable}`
-
-Available builtin variables are:
- - `buildId`, `buildNumber`, `displayName`, `description`, `duration`, and `startTime`
- - `params.<BuildParameterName>` where `<BuildParameterName>` matches any Parameter used for running the job.
-
-   **Note:** If the build parameter is not set you can use the following syntax to use a fallback value:
-   `params.<BuildParameterName>|<FallbackValue>`
-
-Example: `?subject=Build ${params.BUILD_BRANCH|master} (${displayName})`
-
-## Pipeline (DSL)
-
-```groovy
-/**
- * Adds a badge configuration with the given id.
- * minimal params
- *
- * id: A unique id for the configuration
- */
-addEmbeddableBadgeConfiguration(id: <id>)
-
-/**
- * all params
- *
- * id: A unique id for the configuration
- * subject: A subject text
- * status: A status text
- * color: A valid color (RGB-HEX: RRGGBB or valid SVG color name)
- * animatedOverlayColor: A valid color (RGB-HEX: RRGGBB or valid SVG color name)
- * link: The link to be opened upon clicking.
- */
-addEmbeddableBadgeConfiguration(id: <string>,
-                                subject: <string>,
-                                status: <string>,
-                                color: <string>,
-                                animatedOverlayColor: <string>,
-                                link: <string>)
-```
-
-This function returns a configuration object.
-
-### Example
-
-```groovy
-def win32BuildBadge = addEmbeddableBadgeConfiguration(id: "win32build", subject: "Windows Build")
-
-def RunBuild() {
-    echo 'Sleeping instead of running the build'
-    sleep 10
-}
-
-pipeline {
-    agent any
-    stages {
-        stage('Building') {
-            steps {
-                script {
-                    win32BuildBadge.setStatus('running')
-                    try {
-                        RunBuild()
-                        win32BuildBadge.setStatus('passing')
-                    } catch (Exception err) {
-                        win32BuildBadge.setStatus('failing')
-
-                        /* Note: If you do not set the color
-                                 the configuration uses the best status-matching color.
-                                 passing -> brightgreen
-                                 failing -> red
-                                 ...
-                        */
-                        win32BuildBadge.setColor('pink')
-                        error 'Build failed'
-                    }
-                }
-            }
-        }
-    }
-}
-```
-
-You can use the `config` query parameter to reference the `win32build` id:
-
-`http://<jenkinsroot>/path/to/job/<buildNumber>/badge/icon?config=win32build`
-
-`http://<jenkinsroot>/buildStatus/icon?job=...&build=...&config=win32build`
-
-![Passing](src/doc/config_example_1.svg "Passing")
-![Failing](src/doc/config_example_2.svg "Failing")
-
-## Text variant
-
-The text variant returns a string representing the build status.
-Build status strings returned by the text variant include:
-
-* `Success` - the build succeeded
-* `Failed` - the build failed
-* `Unstable` - the build succeeded but one or more tests failed
-* `Aborted` - the build was canceled
-* `Not built` - the build has not yet run
-
-More details of the valid build results are available in the [Jenkins javadoc](https://javadoc.jenkins-ci.org/hudson/model/Result.html#field.summary).
-
-## Extension points for plugin developers
-
-A [Jenkins Extension annotation](https://www.jenkins.io/doc/developer/extensibility/#extension-annotation) allows Jenkins to discover classes, instantiate them, and register them in global lists of implementations of their supertypes and interfaces.
-The plugin provides several extension points that plugin developers can use to extend the behavior of the plugin.
-The Jenkins developer documentation provides more details on [extensions](https://www.jenkins.io/doc/developer/extensions/) and how to use them.
-
-### `JobSelectorExtensionPoint`
-
-The [`JobSelectorExtensionPoint`](https://javadoc.jenkins-ci.org/plugin/embeddable-build-status/org/jenkinsci/plugins/badge/extensionpoints/JobSelectorExtensionPoint.html) allows custom job selector implementations.
-
-### `RunSelectorExtensionPoint`
-
-The [`RunSelectorExtensionPoint`](https://javadoc.jenkins-ci.org/plugin/embeddable-build-status/org/jenkinsci/plugins/badge/extensionpoints/RunSelectorExtensionPoint.html) allows custom run selector implementations.
-
-### `ParameterResolverExtensionPoint`
-
-The [`ParameterResolverExtensionPoint`](https://javadoc.jenkins-ci.org/plugin/embeddable-build-status/org/jenkinsci/plugins/badge/extensionpoints/ParameterResolverExtensionPoint.html) allow custom `${<Parameter>}` resolver implementations.
+# Plugin status on [ci.jenkins.io](https://ci.jenkins.io)
+
+Embeddable build status links to ci.jenkins.io for plugins.
+
+[![Active Directory](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master/badge/icon?subject=Active+Directory)](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master)
+[![Analysis Model](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main/badge/icon?subject=Analysis+Model)](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main)
+[![Ant](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master/badge/icon?subject=Ant)](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master)
+[![Apache HTTP Components Client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master/badge/icon?subject=Apache+HTTP+Components+Client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
+[![Artifact Manager on S3](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master/badge/icon?subject=Artifact+Manager+on+S3)](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master)
+[![ASM](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main/badge/icon?subject=ASM)](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main)
+[![Authentication Tokens](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master/badge/icon?subject=Authentication+Tokens)](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master)
+[![AWS Credentials](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master/badge/icon?subject=AWS+Credentials)](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master)
+[![AWS EC2](https://ci.jenkins.io/job/Plugins/job/ec2-plugin/job/master/badge/icon?subject=AWS+EC2)](https://ci.jenkins.io/job/Plugins/job/ec2-plugin/job/master)
+[![AWS Global Configuration](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master/badge/icon?subject=AWS+Global+Configuration)](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master)
+[![AWS SDK](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk-plugin/job/master/badge/icon?subject=AWS+SDK)](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk-plugin/job/master)
+[![Bitbucket Branch Source](https://ci.jenkins.io/job/Plugins/job/bitbucket-branch-source-plugin/job/master/badge/icon?subject=Bitbucket+Branch+Source)](https://ci.jenkins.io/job/Plugins/job/bitbucket-branch-source-plugin/job/master)
+[![Blue Ocean](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master/badge/icon?subject=Blue+Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master)
+[![Bootstrap 5](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main/badge/icon?subject=Bootstrap+5)](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main)
+[![bouncycastle](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master/badge/icon?subject=bouncycastle)](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master)
+[![Branch](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master/badge/icon?subject=Branch)](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master)
+[![Caffeine](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master/badge/icon?subject=Caffeine)](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master)
+[![Checks](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master/badge/icon?subject=Checks)](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master)
+[![Command Launcher](https://ci.jenkins.io/job/Plugins/job/command-launcher-plugin/job/master/badge/icon?subject=Command+Launcher)](https://ci.jenkins.io/job/Plugins/job/command-launcher-plugin/job/master)
+[![commons-lang3 v3.x](https://ci.jenkins.io/job/Plugins/job/commons-lang3-api-plugin/job/main/badge/icon?subject=commons-lang3+v3.x)](https://ci.jenkins.io/job/Plugins/job/commons-lang3-api-plugin/job/main)
+[![commons-text](https://ci.jenkins.io/job/Plugins/job/commons-text-api-plugin/job/main/badge/icon?subject=commons-text)](https://ci.jenkins.io/job/Plugins/job/commons-text-api-plugin/job/main)
+[![Config File Provider](https://ci.jenkins.io/job/Plugins/job/config-file-provider-plugin/job/master/badge/icon?subject=Config+File+Provider)](https://ci.jenkins.io/job/Plugins/job/config-file-provider-plugin/job/master)
+[![Confiiguration As Code](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master/badge/icon?subject=Confiiguration+As+Code)](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master)
+[![Copy Artifact](https://ci.jenkins.io/job/Plugins/job/copyartifact-plugin/job/master/badge/icon?subject=Copy+Artifact)](https://ci.jenkins.io/job/Plugins/job/copyartifact-plugin/job/master)
+[![Credentials](https://ci.jenkins.io/job/Plugins/job/credentials-plugin/job/master/badge/icon?subject=Credentials)](https://ci.jenkins.io/job/Plugins/job/credentials-plugin/job/master)
+[![Credentials Binding](https://ci.jenkins.io/job/Plugins/job/credentials-binding-plugin/job/master/badge/icon?subject=Credentials+Binding)](https://ci.jenkins.io/job/Plugins/job/credentials-binding-plugin/job/master)
+[![Dashboard View](https://ci.jenkins.io/job/Plugins/job/dashboard-view-plugin/job/main/badge/icon?subject=Dashboard+View)](https://ci.jenkins.io/job/Plugins/job/dashboard-view-plugin/job/main)
+[![DataTables.net](https://ci.jenkins.io/job/Plugins/job/data-tables-api-plugin/job/main/badge/icon?subject=DataTables.net)](https://ci.jenkins.io/job/Plugins/job/data-tables-api-plugin/job/main)
+[![Declarative Pipeline Migration Assistant](https://ci.jenkins.io/job/Plugins/job/declarative-pipeline-migration-assistant-plugin/job/master/badge/icon?subject=Declarative+Pipeline+Migration+Assistant)](https://ci.jenkins.io/job/Plugins/job/declarative-pipeline-migration-assistant-plugin/job/master)
+[![Display URL](https://ci.jenkins.io/job/Plugins/job/display-url-api-plugin/job/master/badge/icon?subject=Display+URL)](https://ci.jenkins.io/job/Plugins/job/display-url-api-plugin/job/master)
+[![Display URL for Blue Ocean](https://ci.jenkins.io/job/Plugins/job/blueocean-display-url-plugin/job/master/badge/icon?subject=Display+URL+for+Blue+Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-display-url-plugin/job/master)
+[![Docker Commons](https://ci.jenkins.io/job/Plugins/job/docker-commons-plugin/job/master/badge/icon?subject=Docker+Commons)](https://ci.jenkins.io/job/Plugins/job/docker-commons-plugin/job/master)
+[![Docker Hub/Registry Notification](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master/badge/icon?subject=Docker+Hub%2FRegistry+Notification)](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master)
+[![Docker Pipeline](https://ci.jenkins.io/job/Plugins/job/docker-workflow-plugin/job/master/badge/icon?subject=Docker+Pipeline)](https://ci.jenkins.io/job/Plugins/job/docker-workflow-plugin/job/master)
+[![Durable Task](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master/badge/icon?subject=Durable+Task)](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master)
+[![ECharts](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main/badge/icon?subject=ECharts)](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main)
+[![EDDSA](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master/badge/icon?subject=EDDSA)](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master)
+[![Email Extension](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/master/badge/icon?subject=Email+Extension)](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/master)
+[![Favorite](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master/badge/icon?subject=Favorite)](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master)
+[![Flow](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master/badge/icon?subject=Flow)](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master)
+[![Folders](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master/badge/icon?subject=Folders)](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master)
+[![Font Awesome](https://ci.jenkins.io/job/Plugins/job/font-awesome-api-plugin/job/main/badge/icon?subject=Font+Awesome)](https://ci.jenkins.io/job/Plugins/job/font-awesome-api-plugin/job/main)
+[![Forensics](https://ci.jenkins.io/job/Plugins/job/forensics-api-plugin/job/main/badge/icon?subject=Forensics)](https://ci.jenkins.io/job/Plugins/job/forensics-api-plugin/job/main)
+[![Git](https://ci.jenkins.io/job/Plugins/job/git-plugin/job/master/badge/icon?subject=Git)](https://ci.jenkins.io/job/Plugins/job/git-plugin/job/master)
+[![Git client](https://ci.jenkins.io/job/Plugins/job/git-client-plugin/job/master/badge/icon?subject=Git+client)](https://ci.jenkins.io/job/Plugins/job/git-client-plugin/job/master)
+[![GIT server](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master/badge/icon?subject=GIT+server)](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master)
+[![GitHub](https://ci.jenkins.io/job/Plugins/job/github-api-plugin/job/master/badge/icon?subject=GitHub)](https://ci.jenkins.io/job/Plugins/job/github-api-plugin/job/master)
+[![GitHub Branch Source](https://ci.jenkins.io/job/Plugins/job/github-branch-source-plugin/job/master/badge/icon?subject=GitHub+Branch+Source)](https://ci.jenkins.io/job/Plugins/job/github-branch-source-plugin/job/master)
+[![GitLab](https://ci.jenkins.io/job/Plugins/job/gitlab-api-plugin/job/master/badge/icon?subject=GitLab)](https://ci.jenkins.io/job/Plugins/job/gitlab-api-plugin/job/master)
+[![GitLab Branch Source](https://ci.jenkins.io/job/Plugins/job/gitlab-branch-source-plugin/job/master/badge/icon?subject=GitLab+Branch+Source)](https://ci.jenkins.io/job/Plugins/job/gitlab-branch-source-plugin/job/master)
+[![Google Cloud Platform SDK](https://ci.jenkins.io/job/Plugins/job/gcp-java-sdk-plugin/job/master/badge/icon?subject=Google+Cloud+Platform+SDK)](https://ci.jenkins.io/job/Plugins/job/gcp-java-sdk-plugin/job/master)
+[![Google Compute Engine](https://ci.jenkins.io/job/Plugins/job/google-compute-engine-plugin/job/master/badge/icon?subject=Google+Compute+Engine)](https://ci.jenkins.io/job/Plugins/job/google-compute-engine-plugin/job/master)
+[![Google Kubernetes Engine](https://ci.jenkins.io/job/Plugins/job/google-kubernetes-engine-plugin/job/develop/badge/icon?subject=Google+Kubernetes+Engine)](https://ci.jenkins.io/job/Plugins/job/google-kubernetes-engine-plugin/job/develop)
+[![Google Metadata](https://ci.jenkins.io/job/Plugins/job/google-metadata-plugin/job/develop/badge/icon?subject=Google+Metadata)](https://ci.jenkins.io/job/Plugins/job/google-metadata-plugin/job/develop)
+[![Google OAuth](https://ci.jenkins.io/job/Plugins/job/google-oauth-plugin/job/develop/badge/icon?subject=Google+OAuth)](https://ci.jenkins.io/job/Plugins/job/google-oauth-plugin/job/develop)
+[![Google Storage](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/master/badge/icon?subject=Google+Storage)](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/master)
+[![Gradle](https://ci.jenkins.io/job/Plugins/job/gradle-plugin/job/master/badge/icon?subject=Gradle)](https://ci.jenkins.io/job/Plugins/job/gradle-plugin/job/master)
+[![Gson](https://ci.jenkins.io/job/Plugins/job/gson-api-plugin/job/main/badge/icon?subject=Gson)](https://ci.jenkins.io/job/Plugins/job/gson-api-plugin/job/main)
+[![Handy Uri Templates 2.x](https://ci.jenkins.io/job/Plugins/job/handy-uri-templates-2-api-plugin/job/master/badge/icon?subject=Handy+Uri+Templates+2.x)](https://ci.jenkins.io/job/Plugins/job/handy-uri-templates-2-api-plugin/job/master)
+[![HTML Publisher](https://ci.jenkins.io/job/Plugins/job/htmlpublisher-plugin/job/master/badge/icon?subject=HTML+Publisher)](https://ci.jenkins.io/job/Plugins/job/htmlpublisher-plugin/job/master)
+[![Instance Identity](https://ci.jenkins.io/job/Plugins/job/instance-identity-plugin/job/master/badge/icon?subject=Instance+Identity)](https://ci.jenkins.io/job/Plugins/job/instance-identity-plugin/job/master)
+[![Ionicons](https://ci.jenkins.io/job/Plugins/job/ionicons-api-plugin/job/main/badge/icon?subject=Ionicons)](https://ci.jenkins.io/job/Plugins/job/ionicons-api-plugin/job/main)
+[![Jackson](https://ci.jenkins.io/job/Plugins/job/jackson2-api-plugin/job/master/badge/icon?subject=Jackson)](https://ci.jenkins.io/job/Plugins/job/jackson2-api-plugin/job/master)
+[![Jacoco](https://ci.jenkins.io/job/Plugins/job/jacoco-plugin/job/master/badge/icon?subject=Jacoco)](https://ci.jenkins.io/job/Plugins/job/jacoco-plugin/job/master)
+[![Jakarta Activation](https://ci.jenkins.io/job/Plugins/job/jakarta-activation-api-plugin/job/master/badge/icon?subject=Jakarta+Activation)](https://ci.jenkins.io/job/Plugins/job/jakarta-activation-api-plugin/job/master)
+[![Jakarta Mail](https://ci.jenkins.io/job/Plugins/job/jakarta-mail-api-plugin/job/master/badge/icon?subject=Jakarta+Mail)](https://ci.jenkins.io/job/Plugins/job/jakarta-mail-api-plugin/job/master)
+[![Java XML Bindings](https://ci.jenkins.io/job/Plugins/job/jaxb-plugin/job/master/badge/icon?subject=Java+XML+Bindings)](https://ci.jenkins.io/job/Plugins/job/jaxb-plugin/job/master)
+[![Javadoc](https://ci.jenkins.io/job/Plugins/job/javadoc-plugin/job/master/badge/icon?subject=Javadoc)](https://ci.jenkins.io/job/Plugins/job/javadoc-plugin/job/master)
+[![Javax Activation](https://ci.jenkins.io/job/Plugins/job/javax-activation-api-plugin/job/master/badge/icon?subject=Javax+Activation)](https://ci.jenkins.io/job/Plugins/job/javax-activation-api-plugin/job/master)
+[![Javax Mail](https://ci.jenkins.io/job/Plugins/job/javax-mail-api-plugin/job/master/badge/icon?subject=Javax+Mail)](https://ci.jenkins.io/job/Plugins/job/javax-mail-api-plugin/job/master)
+[![Jersey 2](https://ci.jenkins.io/job/Plugins/job/jersey2-api-plugin/job/master/badge/icon?subject=Jersey+2)](https://ci.jenkins.io/job/Plugins/job/jersey2-api-plugin/job/master)
+[![jjwt api](https://ci.jenkins.io/job/Plugins/job/jjwt-api-plugin/job/master/badge/icon?subject=jjwt+api)](https://ci.jenkins.io/job/Plugins/job/jjwt-api-plugin/job/master)
+[![Joda Time](https://ci.jenkins.io/job/Plugins/job/joda-time-api-plugin/job/main/badge/icon?subject=Joda+Time)](https://ci.jenkins.io/job/Plugins/job/joda-time-api-plugin/job/main)
+[![jQuery](https://ci.jenkins.io/job/Plugins/job/jquery-plugin/job/master/badge/icon?subject=jQuery)](https://ci.jenkins.io/job/Plugins/job/jquery-plugin/job/master)
+[![JQuery 3](https://ci.jenkins.io/job/Plugins/job/jquery3-api-plugin/job/main/badge/icon?subject=JQuery+3)](https://ci.jenkins.io/job/Plugins/job/jquery3-api-plugin/job/main)
+[![JSch](https://ci.jenkins.io/job/Plugins/job/jsch-plugin/job/master/badge/icon?subject=JSch)](https://ci.jenkins.io/job/Plugins/job/jsch-plugin/job/master)
+[![JSON](https://ci.jenkins.io/job/Plugins/job/json-api-plugin/job/main/badge/icon?subject=JSON)](https://ci.jenkins.io/job/Plugins/job/json-api-plugin/job/main)
+[![JSON Path](https://ci.jenkins.io/job/Plugins/job/json-path-api-plugin/job/main/badge/icon?subject=JSON+Path)](https://ci.jenkins.io/job/Plugins/job/json-path-api-plugin/job/main)
+[![JUnit](https://ci.jenkins.io/job/Plugins/job/junit-plugin/job/master/badge/icon?subject=JUnit)](https://ci.jenkins.io/job/Plugins/job/junit-plugin/job/master)
+[![Kubernetes](https://ci.jenkins.io/job/Plugins/job/kubernetes-plugin/job/master/badge/icon?subject=Kubernetes)](https://ci.jenkins.io/job/Plugins/job/kubernetes-plugin/job/master)
+[![Kubernetes Client](https://ci.jenkins.io/job/Plugins/job/kubernetes-client-api-plugin/job/master/badge/icon?subject=Kubernetes+Client)](https://ci.jenkins.io/job/Plugins/job/kubernetes-client-api-plugin/job/master)
+[![Kubernetes Credentials](https://ci.jenkins.io/job/Plugins/job/kubernetes-credentials-plugin/job/master/badge/icon?subject=Kubernetes+Credentials)](https://ci.jenkins.io/job/Plugins/job/kubernetes-credentials-plugin/job/master)
+[![LDAP](https://ci.jenkins.io/job/Plugins/job/ldap-plugin/job/master/badge/icon?subject=LDAP)](https://ci.jenkins.io/job/Plugins/job/ldap-plugin/job/master)
+[![Mailer](https://ci.jenkins.io/job/Plugins/job/mailer-plugin/job/master/badge/icon?subject=Mailer)](https://ci.jenkins.io/job/Plugins/job/mailer-plugin/job/master)
+[![MapDB](https://ci.jenkins.io/job/Plugins/job/mapdb-api-plugin/job/master/badge/icon?subject=MapDB)](https://ci.jenkins.io/job/Plugins/job/mapdb-api-plugin/job/master)
+[![Matrix Authorization Strategy](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/master/badge/icon?subject=Matrix+Authorization+Strategy)](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/master)
+[![Matrix Project](https://ci.jenkins.io/job/Plugins/job/matrix-project-plugin/job/master/badge/icon?subject=Matrix+Project)](https://ci.jenkins.io/job/Plugins/job/matrix-project-plugin/job/master)
+[![Metrics](https://ci.jenkins.io/job/Plugins/job/metrics-plugin/job/master/badge/icon?subject=Metrics)](https://ci.jenkins.io/job/Plugins/job/metrics-plugin/job/master)
+[![Mina SSHD](https://ci.jenkins.io/job/Plugins/job/mina-sshd-api-plugin/job/main/badge/icon?subject=Mina+SSHD)](https://ci.jenkins.io/job/Plugins/job/mina-sshd-api-plugin/job/main)
+[![Mock Security Realm](https://ci.jenkins.io/job/Plugins/job/mock-security-realm-plugin/job/master/badge/icon?subject=Mock+Security+Realm)](https://ci.jenkins.io/job/Plugins/job/mock-security-realm-plugin/job/master)
+[![Node Iterator](https://ci.jenkins.io/job/Plugins/job/node-iterator-api-plugin/job/master/badge/icon?subject=Node+Iterator)](https://ci.jenkins.io/job/Plugins/job/node-iterator-api-plugin/job/master)
+[![NodeJS](https://ci.jenkins.io/job/Plugins/job/nodejs-plugin/job/master/badge/icon?subject=NodeJS)](https://ci.jenkins.io/job/Plugins/job/nodejs-plugin/job/master)
+[![OAuth Credentials](https://ci.jenkins.io/job/Plugins/job/oauth-credentials-plugin/job/master/badge/icon?subject=OAuth+Credentials)](https://ci.jenkins.io/job/Plugins/job/oauth-credentials-plugin/job/master)
+[![OkHttp API Plugin](https://ci.jenkins.io/job/Plugins/job/okhttp-api-plugin/job/master/badge/icon?subject=OkHttp+API+Plugin)](https://ci.jenkins.io/job/Plugins/job/okhttp-api-plugin/job/master)
+[![OpenID Connect Provider](https://ci.jenkins.io/job/Plugins/job/oidc-provider-plugin/job/master/badge/icon?subject=OpenID+Connect+Provider)](https://ci.jenkins.io/job/Plugins/job/oidc-provider-plugin/job/master)
+[![Oracle Java SE Development Kit Installer](https://ci.jenkins.io/job/Plugins/job/jdk-tool-plugin/job/master/badge/icon?subject=Oracle+Java+SE+Development+Kit+Installer)](https://ci.jenkins.io/job/Plugins/job/jdk-tool-plugin/job/master)
+[![OWASP Markup Formatter](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master/badge/icon?subject=OWASP+Markup+Formatter)](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master)
+[![PAM Authentication](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master/badge/icon?subject=PAM+Authentication)](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master)
+[![Pipeline](https://ci.jenkins.io/job/Plugins/job/workflow-api-plugin/job/master/badge/icon?subject=Pipeline)](https://ci.jenkins.io/job/Plugins/job/workflow-api-plugin/job/master)
+[![Pipeline Basic Steps](https://ci.jenkins.io/job/Plugins/job/workflow-basic-steps-plugin/job/master/badge/icon?subject=Pipeline+Basic+Steps)](https://ci.jenkins.io/job/Plugins/job/workflow-basic-steps-plugin/job/master)
+[![Pipeline Build Step](https://ci.jenkins.io/job/Plugins/job/pipeline-build-step-plugin/job/master/badge/icon?subject=Pipeline+Build+Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-build-step-plugin/job/master)
+[![Pipeline GitHub Groovy Libraries](https://ci.jenkins.io/job/Plugins/job/pipeline-github-lib-plugin/job/master/badge/icon?subject=Pipeline+GitHub+Groovy+Libraries)](https://ci.jenkins.io/job/Plugins/job/pipeline-github-lib-plugin/job/master)
+[![Pipeline Graph Analysis](https://ci.jenkins.io/job/Plugins/job/pipeline-graph-analysis-plugin/job/master/badge/icon?subject=Pipeline+Graph+Analysis)](https://ci.jenkins.io/job/Plugins/job/pipeline-graph-analysis-plugin/job/master)
+[![Pipeline Groovy](https://ci.jenkins.io/job/Plugins/job/workflow-cps-plugin/job/master/badge/icon?subject=Pipeline+Groovy)](https://ci.jenkins.io/job/Plugins/job/workflow-cps-plugin/job/master)
+[![Pipeline Groovy Lib](https://ci.jenkins.io/job/Plugins/job/pipeline-groovy-lib-plugin/job/master/badge/icon?subject=Pipeline+Groovy+Lib)](https://ci.jenkins.io/job/Plugins/job/pipeline-groovy-lib-plugin/job/master)
+[![Pipeline Input Step](https://ci.jenkins.io/job/Plugins/job/pipeline-input-step-plugin/job/master/badge/icon?subject=Pipeline+Input+Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-input-step-plugin/job/master)
+[![Pipeline Job](https://ci.jenkins.io/job/Plugins/job/workflow-job-plugin/job/master/badge/icon?subject=Pipeline+Job)](https://ci.jenkins.io/job/Plugins/job/workflow-job-plugin/job/master)
+[![Pipeline Maven Integration](https://ci.jenkins.io/job/Plugins/job/pipeline-maven-plugin/job/master/badge/icon?subject=Pipeline+Maven+Integration)](https://ci.jenkins.io/job/Plugins/job/pipeline-maven-plugin/job/master)
+[![Pipeline Milestone Step](https://ci.jenkins.io/job/Plugins/job/pipeline-milestone-step-plugin/job/master/badge/icon?subject=Pipeline+Milestone+Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-milestone-step-plugin/job/master)
+[![Pipeline Model](https://ci.jenkins.io/job/Plugins/job/pipeline-model-definition-plugin/job/master/badge/icon?subject=Pipeline+Model)](https://ci.jenkins.io/job/Plugins/job/pipeline-model-definition-plugin/job/master)
+[![Pipeline Multibranch](https://ci.jenkins.io/job/Plugins/job/workflow-multibranch-plugin/job/master/badge/icon?subject=Pipeline+Multibranch)](https://ci.jenkins.io/job/Plugins/job/workflow-multibranch-plugin/job/master)
+[![Pipeline Nodes and Processes](https://ci.jenkins.io/job/Plugins/job/workflow-durable-task-step-plugin/job/master/badge/icon?subject=Pipeline+Nodes+and+Processes)](https://ci.jenkins.io/job/Plugins/job/workflow-durable-task-step-plugin/job/master)
+[![Pipeline REST](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-view-plugin/job/master/badge/icon?subject=Pipeline+REST)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-view-plugin/job/master)
+[![Pipeline SCM Step](https://ci.jenkins.io/job/Plugins/job/workflow-scm-step-plugin/job/master/badge/icon?subject=Pipeline+SCM+Step)](https://ci.jenkins.io/job/Plugins/job/workflow-scm-step-plugin/job/master)
+[![Pipeline Stage Step](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-step-plugin/job/master/badge/icon?subject=Pipeline+Stage+Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-step-plugin/job/master)
+[![Pipeline Step](https://ci.jenkins.io/job/Plugins/job/workflow-step-api-plugin/job/master/badge/icon?subject=Pipeline+Step)](https://ci.jenkins.io/job/Plugins/job/workflow-step-api-plugin/job/master)
+[![Pipeline Supporting APIs](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master/badge/icon?subject=Pipeline+Supporting+APIs)](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master)
+[![Plain Credentials](https://ci.jenkins.io/job/Plugins/job/plain-credentials-plugin/job/master/badge/icon?subject=Plain+Credentials)](https://ci.jenkins.io/job/Plugins/job/plain-credentials-plugin/job/master)
+[![Plugin Util](https://ci.jenkins.io/job/Plugins/job/plugin-util-api-plugin/job/main/badge/icon?subject=Plugin+Util)](https://ci.jenkins.io/job/Plugins/job/plugin-util-api-plugin/job/main)
+[![Popper2](https://ci.jenkins.io/job/Plugins/job/popper2-api-plugin/job/master/badge/icon?subject=Popper2)](https://ci.jenkins.io/job/Plugins/job/popper2-api-plugin/job/master)
+[![Prism](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main/badge/icon?subject=Prism)](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main)
+[![Pub-Sub "light" Bus](https://ci.jenkins.io/job/Plugins/job/pubsub-light-plugin/job/master/badge/icon?subject=Pub-Sub+%22light%22+Bus)](https://ci.jenkins.io/job/Plugins/job/pubsub-light-plugin/job/master)
+[![S3 publisher](https://ci.jenkins.io/job/Plugins/job/s3-plugin/job/master/badge/icon?subject=S3+publisher)](https://ci.jenkins.io/job/Plugins/job/s3-plugin/job/master)
+[![SAML](https://ci.jenkins.io/job/Plugins/job/saml-plugin/job/main/badge/icon?subject=SAML)](https://ci.jenkins.io/job/Plugins/job/saml-plugin/job/main)
+[![SCM](https://ci.jenkins.io/job/Plugins/job/scm-api-plugin/job/master/badge/icon?subject=SCM)](https://ci.jenkins.io/job/Plugins/job/scm-api-plugin/job/master)
+[![Script Security](https://ci.jenkins.io/job/Plugins/job/script-security-plugin/job/master/badge/icon?subject=Script+Security)](https://ci.jenkins.io/job/Plugins/job/script-security-plugin/job/master)
+[![Secure Requester Whitelist](https://ci.jenkins.io/job/Plugins/job/secure-requester-whitelist-plugin/job/master/badge/icon?subject=Secure+Requester+Whitelist)](https://ci.jenkins.io/job/Plugins/job/secure-requester-whitelist-plugin/job/master)
+[![Server Sent Events (SSE) Gateway](https://ci.jenkins.io/job/Plugins/job/sse-gateway-plugin/job/master/badge/icon?subject=Server+Sent+Events+%28SSE%29+Gateway)](https://ci.jenkins.io/job/Plugins/job/sse-gateway-plugin/job/master)
+[![Snakeyaml](https://ci.jenkins.io/job/Plugins/job/snakeyaml-api-plugin/job/master/badge/icon?subject=Snakeyaml)](https://ci.jenkins.io/job/Plugins/job/snakeyaml-api-plugin/job/master)
+[![SSH Agent](https://ci.jenkins.io/job/Plugins/job/ssh-agent-plugin/job/master/badge/icon?subject=SSH+Agent)](https://ci.jenkins.io/job/Plugins/job/ssh-agent-plugin/job/master)
+[![SSH Build Agents](https://ci.jenkins.io/job/Plugins/job/ssh-agents-plugin/job/main/badge/icon?subject=SSH+Build+Agents)](https://ci.jenkins.io/job/Plugins/job/ssh-agents-plugin/job/main)
+[![SSH Credentials](https://ci.jenkins.io/job/Plugins/job/ssh-credentials-plugin/job/master/badge/icon?subject=SSH+Credentials)](https://ci.jenkins.io/job/Plugins/job/ssh-credentials-plugin/job/master)
+[![SSH server](https://ci.jenkins.io/job/Plugins/job/sshd-plugin/job/main/badge/icon?subject=SSH+server)](https://ci.jenkins.io/job/Plugins/job/sshd-plugin/job/main)
+[![Structs](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master/badge/icon?subject=Structs)](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master)
+[![Support Core](https://ci.jenkins.io/job/Plugins/job/support-core-plugin/job/master/badge/icon?subject=Support+Core)](https://ci.jenkins.io/job/Plugins/job/support-core-plugin/job/master)
+[![Timestamper](https://ci.jenkins.io/job/Plugins/job/timestamper-plugin/job/master/badge/icon?subject=Timestamper)](https://ci.jenkins.io/job/Plugins/job/timestamper-plugin/job/master)
+[![Token Macro](https://ci.jenkins.io/job/Plugins/job/token-macro-plugin/job/main/badge/icon?subject=Token+Macro)](https://ci.jenkins.io/job/Plugins/job/token-macro-plugin/job/main)
+[![Trilead](https://ci.jenkins.io/job/Plugins/job/trilead-api-plugin/job/main/badge/icon?subject=Trilead)](https://ci.jenkins.io/job/Plugins/job/trilead-api-plugin/job/main)
+[![Unique ID](https://ci.jenkins.io/job/Plugins/job/unique-id-plugin/job/master/badge/icon?subject=Unique+ID)](https://ci.jenkins.io/job/Plugins/job/unique-id-plugin/job/master)
+[![Variant](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master/badge/icon?subject=Variant)](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master)
+[![View Job Filters](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master/badge/icon?subject=View+Job+Filters)](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master)
+[![Warnings Next Generation](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main/badge/icon?subject=Warnings+Next+Generation)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main)
