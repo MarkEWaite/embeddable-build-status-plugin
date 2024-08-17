@@ -1,7 +1,12 @@
 # Plugin status on [ci.jenkins.io](https://ci.jenkins.io)
 
-Embeddable build status links to ci.jenkins.io for plugins.
+Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
+[![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
+[![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
+[![Remoting](https://ci.jenkins.io/job/Core/job/remoting/job/master/badge/icon?subject=Remoting)](https://ci.jenkins.io/job/Core/job/remoting/job/master/)
+[![Stapler](https://ci.jenkins.io/job/Core/job/stapler/job/master/badge/icon?subject=Stapler)](https://ci.jenkins.io/job/Core/job/stapler/job/master/)
+[![Winstone](https://ci.jenkins.io/job/Core/job/stapler/job/master/badge/icon?subject=Winstone)](https://ci.jenkins.io/job/Core/job/stapler/job/master/)
 [![Active Directory](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master/badge/icon?subject=Active+Directory)](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master)
 [![Analysis Model](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main/badge/icon?subject=Analysis+Model)](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main)
 [![Ant](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master/badge/icon?subject=Ant)](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master)
