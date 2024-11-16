@@ -44,7 +44,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Durable Task](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master/badge/icon?subject=Durable+Task)](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master)
 [![ECharts](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main/badge/icon?subject=ECharts)](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main)
 [![EDDSA](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master/badge/icon?subject=EDDSA)](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master)
-[![Email Extension](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/master/badge/icon?subject=Email+Extension)](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/master)
+[![Email Extension](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main/badge/icon?subject=Email+Extension)](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main)
 [![Favorite](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master/badge/icon?subject=Favorite)](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master)
 [![Flow](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master/badge/icon?subject=Flow)](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master)
 [![Folders](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master/badge/icon?subject=Folders)](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master)
