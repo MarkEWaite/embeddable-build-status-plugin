@@ -2,6 +2,7 @@
 
 Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
+[![Agents](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/badge/icon?subject=Agents)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
 [![Remoting](https://ci.jenkins.io/job/Core/job/remoting/job/master/badge/icon?subject=Remoting)](https://ci.jenkins.io/job/Core/job/remoting/job/master/)
