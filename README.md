@@ -154,5 +154,5 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
 ## Other plugins
 
-[![HTTP client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/main/badge/icon?subject=HTTP+client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
+[![HTTP client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master/badge/icon?subject=HTTP+client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
 [![Basic branch build strategies](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master/badge/icon?subject=Basic+branch+build+strategies)](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master)
