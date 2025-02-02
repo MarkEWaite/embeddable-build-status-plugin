@@ -151,3 +151,8 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Variant](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master/badge/icon?subject=Variant)](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master)
 [![View Job Filters](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master/badge/icon?subject=View+Job+Filters)](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master)
 [![Warnings](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main/badge/icon?subject=Warnings+Next+Generation)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main)
+
+## Other plugins
+
+[![HTTP client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/main/badge/icon?subject=HTTP+client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
+[![Basic branch build strategies](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master/badge/icon?subject=Basic+branch+build+strategies)](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master)
