@@ -150,7 +150,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Unique ID](https://ci.jenkins.io/job/Plugins/job/unique-id-plugin/job/master/badge/icon?subject=Unique+ID)](https://ci.jenkins.io/job/Plugins/job/unique-id-plugin/job/master)
 [![Variant](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master/badge/icon?subject=Variant)](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master)
 [![View Job Filters](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master/badge/icon?subject=View+Job+Filters)](https://ci.jenkins.io/job/Plugins/job/view-job-filters-plugin/job/master)
-[![Warnings](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main/badge/icon?subject=Warnings+Next+Generation)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main)
+[![Warnings](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main/badge/icon?subject=Warnings)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main)
 
 ## Other plugins
 
