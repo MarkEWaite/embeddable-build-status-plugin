@@ -24,7 +24,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Blue Ocean](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master/badge/icon?subject=Blue+Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master)
 [![Bootstrap 5](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main/badge/icon?subject=Bootstrap+5)](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main)
 [![bouncycastle](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master/badge/icon?subject=bouncycastle)](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master)
-[![Branch](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master/badge/icon?subject=Branch)](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master)
+[![Branch API](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master/badge/icon?subject=Branch+API)](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master)
 [![Caffeine](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master/badge/icon?subject=Caffeine)](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master)
 [![Checks](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master/badge/icon?subject=Checks)](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master)
 [![Command Launcher](https://ci.jenkins.io/job/Plugins/job/command-launcher-plugin/job/master/badge/icon?subject=Command+Launcher)](https://ci.jenkins.io/job/Plugins/job/command-launcher-plugin/job/master)
