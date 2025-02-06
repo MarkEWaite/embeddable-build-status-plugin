@@ -41,7 +41,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Display URL](https://ci.jenkins.io/job/Plugins/job/display-url-api-plugin/job/master/badge/icon?subject=Display+URL)](https://ci.jenkins.io/job/Plugins/job/display-url-api-plugin/job/master)
 [![Display URL for Blue Ocean](https://ci.jenkins.io/job/Plugins/job/blueocean-display-url-plugin/job/master/badge/icon?subject=Display+URL+for+Blue+Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-display-url-plugin/job/master)
 [![Docker Commons](https://ci.jenkins.io/job/Plugins/job/docker-commons-plugin/job/master/badge/icon?subject=Docker+Commons)](https://ci.jenkins.io/job/Plugins/job/docker-commons-plugin/job/master)
-[![Docker Hub/Registry Notification](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master/badge/icon?subject=Docker+Hub%2FRegistry+Notification)](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master)
+[![DockerHub Notification](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master/badge/icon?subject=DockerHub+Notification)](https://ci.jenkins.io/job/Plugins/job/dockerhub-notification-plugin/job/master)
 [![Docker Pipeline](https://ci.jenkins.io/job/Plugins/job/docker-workflow-plugin/job/master/badge/icon?subject=Docker+Pipeline)](https://ci.jenkins.io/job/Plugins/job/docker-workflow-plugin/job/master)
 [![Durable Task](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master/badge/icon?subject=Durable+Task)](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master)
 [![ECharts](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main/badge/icon?subject=ECharts)](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main)
