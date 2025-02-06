@@ -12,7 +12,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Analysis Model](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main/badge/icon?subject=Analysis+Model)](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main)
 [![Ant](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master/badge/icon?subject=Ant)](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master)
 [![Apache HTTP Components Client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master/badge/icon?subject=Apache+HTTP+Components+Client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
-[![Artifact Manager S3](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master/badge/icon?subject=Artifact+Manager+on+S3)](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master)
+[![Artifact Manager S3](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master/badge/icon?subject=Artifact+Manager+S3)](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master)
 [![ASM](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main/badge/icon?subject=ASM)](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main)
 [![Authentication Tokens](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master/badge/icon?subject=Authentication+Tokens)](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master)
 [![AWS Credentials](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master/badge/icon?subject=AWS+Credentials)](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master)
