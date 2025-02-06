@@ -54,7 +54,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Forensics](https://ci.jenkins.io/job/Plugins/job/forensics-api-plugin/job/main/badge/icon?subject=Forensics)](https://ci.jenkins.io/job/Plugins/job/forensics-api-plugin/job/main)
 [![Git](https://ci.jenkins.io/job/Plugins/job/git-plugin/job/master/badge/icon?subject=Git)](https://ci.jenkins.io/job/Plugins/job/git-plugin/job/master)
 [![Git client](https://ci.jenkins.io/job/Plugins/job/git-client-plugin/job/master/badge/icon?subject=Git+client)](https://ci.jenkins.io/job/Plugins/job/git-client-plugin/job/master)
-[![GIT server](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master/badge/icon?subject=GIT+server)](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master)
+[![Git server](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master/badge/icon?subject=Git+server)](https://ci.jenkins.io/job/Plugins/job/git-server-plugin/job/master)
 [![GitHub](https://ci.jenkins.io/job/Plugins/job/github-api-plugin/job/master/badge/icon?subject=GitHub)](https://ci.jenkins.io/job/Plugins/job/github-api-plugin/job/master)
 [![GitHub Branch Source](https://ci.jenkins.io/job/Plugins/job/github-branch-source-plugin/job/master/badge/icon?subject=GitHub+Branch+Source)](https://ci.jenkins.io/job/Plugins/job/github-branch-source-plugin/job/master)
 [![GitLab](https://ci.jenkins.io/job/Plugins/job/gitlab-api-plugin/job/master/badge/icon?subject=GitLab)](https://ci.jenkins.io/job/Plugins/job/gitlab-api-plugin/job/master)
