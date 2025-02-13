@@ -64,7 +64,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Google Kubernetes Engine](https://ci.jenkins.io/job/Plugins/job/google-kubernetes-engine-plugin/job/develop/badge/icon?subject=Google+Kubernetes+Engine)](https://ci.jenkins.io/job/Plugins/job/google-kubernetes-engine-plugin/job/develop)
 [![Google Metadata](https://ci.jenkins.io/job/Plugins/job/google-metadata-plugin/job/develop/badge/icon?subject=Google+Metadata)](https://ci.jenkins.io/job/Plugins/job/google-metadata-plugin/job/develop)
 [![Google OAuth](https://ci.jenkins.io/job/Plugins/job/google-oauth-plugin/job/develop/badge/icon?subject=Google+OAuth)](https://ci.jenkins.io/job/Plugins/job/google-oauth-plugin/job/develop)
-[![Google Storage](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/master/badge/icon?subject=Google+Storage)](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/master)
+[![Google Storage](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/develop/badge/icon?subject=Google+Storage)](https://ci.jenkins.io/job/Plugins/job/google-storage-plugin/job/develop)
 [![Gradle](https://ci.jenkins.io/job/Plugins/job/gradle-plugin/job/master/badge/icon?subject=Gradle)](https://ci.jenkins.io/job/Plugins/job/gradle-plugin/job/master)
 [![GSON](https://ci.jenkins.io/job/Plugins/job/gson-api-plugin/job/main/badge/icon?subject=GSON)](https://ci.jenkins.io/job/Plugins/job/gson-api-plugin/job/main)
 [![Handy Uri Templates 2.x](https://ci.jenkins.io/job/Plugins/job/handy-uri-templates-2-api-plugin/job/master/badge/icon?subject=Handy+Uri+Templates+2.x)](https://ci.jenkins.io/job/Plugins/job/handy-uri-templates-2-api-plugin/job/master)
