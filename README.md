@@ -9,6 +9,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Stapler](https://ci.jenkins.io/job/Core/job/stapler/job/master/badge/icon?subject=Stapler)](https://ci.jenkins.io/job/Core/job/stapler/job/master/)
 [![Winstone](https://ci.jenkins.io/job/Core/job/stapler/job/master/badge/icon?subject=Winstone)](https://ci.jenkins.io/job/Core/job/stapler/job/master/)
 [![Active Directory](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master/badge/icon?subject=Active+Directory)](https://ci.jenkins.io/job/Plugins/job/active-directory-plugin/job/master)
+[![Advisor](https://ci.jenkins.io/job/Plugins/job/cloudbees-jenkins-advisor-plugin/job/master//badge/icon?subject=Advisor)](https://ci.jenkins.io/job/Plugins/job/cloudbees-jenkins-advisor-plugin/job/master/)
 [![Analysis Model](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main/badge/icon?subject=Analysis+Model)](https://ci.jenkins.io/job/Plugins/job/analysis-model-api-plugin/job/main)
 [![Ant](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master/badge/icon?subject=Ant)](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master)
 [![Apache HTTP Client 4](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master/badge/icon?subject=Apache+HTTP+Client+4)](https://ci.jenkins.io/job/Plugins/job/apache-httpcomponents-client-4-api-plugin/job/master)
