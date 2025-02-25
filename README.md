@@ -2,7 +2,6 @@
 
 Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
-[![CI Agents](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/badge/icon?subject=CI+Agents)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
 [![Remoting](https://ci.jenkins.io/job/Core/job/remoting/job/master/badge/icon?subject=Remoting)](https://ci.jenkins.io/job/Core/job/remoting/job/master/)
@@ -14,16 +13,16 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Ant](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master/badge/icon?subject=Ant)](https://ci.jenkins.io/job/Plugins/job/ant-plugin/job/master)
 [![Artifact Manager S3](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master/badge/icon?subject=Artifact+Manager+S3)](https://ci.jenkins.io/job/Plugins/job/artifact-manager-s3-plugin/job/master)
 [![ASM](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main/badge/icon?subject=ASM)](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main)
-[![Authentication Tokens](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master/badge/icon?subject=Authentication+Tokens)](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master)
+[![Auth Tokens](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master/badge/icon?subject=Auth+Tokens)](https://ci.jenkins.io/job/Plugins/job/authentication-tokens-plugin/job/master)
 [![AWS Credentials](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master/badge/icon?subject=AWS+Credentials)](https://ci.jenkins.io/job/Plugins/job/aws-credentials-plugin/job/master)
 [![AWS EC2](https://ci.jenkins.io/job/Plugins/job/ec2-plugin/job/master/badge/icon?subject=AWS+EC2)](https://ci.jenkins.io/job/Plugins/job/ec2-plugin/job/master)
-[![AWS Global Configuration](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master/badge/icon?subject=AWS+Global+Configuration)](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master)
+[![AWS Global Config](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master/badge/icon?subject=AWS+Global+Config)](https://ci.jenkins.io/job/Plugins/job/aws-global-configuration-plugin/job/master)
 [![AWS SDK v1](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk-plugin/job/master/badge/icon?subject=AWS+SDK+v1)](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk-plugin/job/master)
 [![AWS SDK v2](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk2-plugin/job/master/badge/icon?subject=AWS+SDK+v2)](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk2-plugin/job/master)
 [![Bitbucket Branch Source](https://ci.jenkins.io/job/Plugins/job/bitbucket-branch-source-plugin/job/master/badge/icon?subject=Bitbucket+Branch+Source)](https://ci.jenkins.io/job/Plugins/job/bitbucket-branch-source-plugin/job/master)
 [![Blue Ocean](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master/badge/icon?subject=Blue+Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master)
 [![Bootstrap 5](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main/badge/icon?subject=Bootstrap+5)](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/main)
-[![bouncycastle](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master/badge/icon?subject=bouncycastle)](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master)
+[![Bouncy Castle](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master/badge/icon?subject=Bouncy+Castle)](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master)
 [![Branch API](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master/badge/icon?subject=Branch+API)](https://ci.jenkins.io/job/Plugins/job/branch-api-plugin/job/master)
 [![Caffeine](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master/badge/icon?subject=Caffeine)](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master)
 [![Checks](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master/badge/icon?subject=Checks)](https://ci.jenkins.io/job/Plugins/job/checks-api-plugin/job/master)
@@ -46,7 +45,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Durable Task](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master/badge/icon?subject=Durable+Task)](https://ci.jenkins.io/job/Plugins/job/durable-task-plugin/job/master)
 [![ECharts](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main/badge/icon?subject=ECharts)](https://ci.jenkins.io/job/Plugins/job/echarts-api-plugin/job/main)
 [![EDDSA](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master/badge/icon?subject=EDDSA)](https://ci.jenkins.io/job/Plugins/job/eddsa-api-plugin/job/master)
-[![Email Extension](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main/badge/icon?subject=Email+Extension)](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main)
+[![Email Ext](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main/badge/icon?subject=Email+Ext)](https://ci.jenkins.io/job/Plugins/job/email-ext-plugin/job/main)
 [![Favorite](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master/badge/icon?subject=Favorite)](https://ci.jenkins.io/job/Plugins/job/favorite-plugin/job/master)
 [![Flow](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master/badge/icon?subject=Flow)](https://ci.jenkins.io/job/Plugins/job/electricflow-plugin/job/master)
 [![Folders](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master/badge/icon?subject=Folders)](https://ci.jenkins.io/job/Plugins/job/cloudbees-folder-plugin/job/master)
@@ -109,7 +108,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![OpenID Connect Provider](https://ci.jenkins.io/job/Plugins/job/oidc-provider-plugin/job/master/badge/icon?subject=OpenID+Connect+Provider)](https://ci.jenkins.io/job/Plugins/job/oidc-provider-plugin/job/master)
 [![Oracle Java Installer](https://ci.jenkins.io/job/Plugins/job/jdk-tool-plugin/job/master/badge/icon?subject=Oracle+Java+Installer)](https://ci.jenkins.io/job/Plugins/job/jdk-tool-plugin/job/master)
 [![OWASP Formatter](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master/badge/icon?subject=OWASP+Formatter)](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master)
-[![PAM Authentication](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master/badge/icon?subject=PAM+Authentication)](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master)
+[![PAM Auth](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master/badge/icon?subject=PAM+Auth)](https://ci.jenkins.io/job/Plugins/job/pam-auth-plugin/job/master)
 [![Pipeline](https://ci.jenkins.io/job/Plugins/job/workflow-api-plugin/job/master/badge/icon?subject=Pipeline)](https://ci.jenkins.io/job/Plugins/job/workflow-api-plugin/job/master)
 [![Pipeline Aggregator](https://ci.jenkins.io/job/Plugins/job/workflow-aggregator-plugin/job/master/badge/icon?subject=Pipeline+Aggregator)](https://ci.jenkins.io/job/Plugins/job/workflow-aggregator-plugin/job/master)
 [![Pipeline Basic Steps](https://ci.jenkins.io/job/Plugins/job/workflow-basic-steps-plugin/job/master/badge/icon?subject=Pipeline+Basic+Steps)](https://ci.jenkins.io/job/Plugins/job/workflow-basic-steps-plugin/job/master)
@@ -129,11 +128,11 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Pipeline SCM Step](https://ci.jenkins.io/job/Plugins/job/workflow-scm-step-plugin/job/master/badge/icon?subject=Pipeline+SCM+Step)](https://ci.jenkins.io/job/Plugins/job/workflow-scm-step-plugin/job/master)
 [![Pipeline Stage Step](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-step-plugin/job/master/badge/icon?subject=Pipeline+Stage+Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-step-plugin/job/master)
 [![Pipeline Step](https://ci.jenkins.io/job/Plugins/job/workflow-step-api-plugin/job/master/badge/icon?subject=Pipeline+Step)](https://ci.jenkins.io/job/Plugins/job/workflow-step-api-plugin/job/master)
-[![Pipeline Supporting APIs](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master/badge/icon?subject=Pipeline+Supporting+APIs)](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master)
+[![Pipeline APIs](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master/badge/icon?subject=Pipeline+API)](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master)
 [![Plain Credentials](https://ci.jenkins.io/job/Plugins/job/plain-credentials-plugin/job/master/badge/icon?subject=Plain+Credentials)](https://ci.jenkins.io/job/Plugins/job/plain-credentials-plugin/job/master)
 [![Plugin Util](https://ci.jenkins.io/job/Plugins/job/plugin-util-api-plugin/job/main/badge/icon?subject=Plugin+Util)](https://ci.jenkins.io/job/Plugins/job/plugin-util-api-plugin/job/main)
 [![Popper2](https://ci.jenkins.io/job/Plugins/job/popper2-api-plugin/job/master/badge/icon?subject=Popper2)](https://ci.jenkins.io/job/Plugins/job/popper2-api-plugin/job/master)
-[![Prism](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main/badge/icon?subject=Prism)](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main)
+[![Prism API](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main/badge/icon?subject=Prism+API)](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main)
 [![Pub-Sub Light Bus](https://ci.jenkins.io/job/Plugins/job/pubsub-light-plugin/job/master/badge/icon?subject=Pub-Sub+Light+Bus)](https://ci.jenkins.io/job/Plugins/job/pubsub-light-plugin/job/master)
 [![S3 Publisher](https://ci.jenkins.io/job/Plugins/job/s3-plugin/job/master/badge/icon?subject=S3+publisher)](https://ci.jenkins.io/job/Plugins/job/s3-plugin/job/master)
 [![SAML](https://ci.jenkins.io/job/Plugins/job/saml-plugin/job/main/badge/icon?subject=SAML)](https://ci.jenkins.io/job/Plugins/job/saml-plugin/job/main)
@@ -159,3 +158,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 ## Other plugins
 
 [![Basic branch build strategies](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master/badge/icon?subject=Basic+branch+build+strategies)](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master)
+
+## Jobs
+
+[![CI Agents](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/badge/icon?subject=CI+Agents)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/)
