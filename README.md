@@ -30,7 +30,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![Commons Lang 3](https://ci.jenkins.io/job/Plugins/job/commons-lang3-api-plugin/job/main/badge/icon?subject=Commons+Lang+3)](https://ci.jenkins.io/job/Plugins/job/commons-lang3-api-plugin/job/main)
 [![Commons Text](https://ci.jenkins.io/job/Plugins/job/commons-text-api-plugin/job/main/badge/icon?subject=Commons+Text)](https://ci.jenkins.io/job/Plugins/job/commons-text-api-plugin/job/main)
 [![Config File Provider](https://ci.jenkins.io/job/Plugins/job/config-file-provider-plugin/job/master/badge/icon?subject=Config+File+Provider)](https://ci.jenkins.io/job/Plugins/job/config-file-provider-plugin/job/master)
-[![Confiiguration As Code](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master/badge/icon?subject=Confiiguration+As+Code)](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master)
+[![Configuration As Code](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master/badge/icon?subject=Configuration+As+Code)](https://ci.jenkins.io/job/Plugins/job/configuration-as-code-plugin/job/master)
 [![Copy Artifact](https://ci.jenkins.io/job/Plugins/job/copyartifact-plugin/job/master/badge/icon?subject=Copy+Artifact)](https://ci.jenkins.io/job/Plugins/job/copyartifact-plugin/job/master)
 [![Credentials](https://ci.jenkins.io/job/Plugins/job/credentials-plugin/job/master/badge/icon?subject=Credentials)](https://ci.jenkins.io/job/Plugins/job/credentials-plugin/job/master)
 [![Credentials Binding](https://ci.jenkins.io/job/Plugins/job/credentials-binding-plugin/job/master/badge/icon?subject=Credentials+Binding)](https://ci.jenkins.io/job/Plugins/job/credentials-binding-plugin/job/master)
