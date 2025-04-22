@@ -1,0 +1,687 @@
+[
+  [
+    "apache-httpcomponents-client-4-api",
+    "Apache HttpComponents Client 4.x API",
+    "compatible"
+  ],
+  [
+    "caffeine-api",
+    "Caffeine API",
+    "compatible"
+  ],
+  [
+    "commons-lang3-api",
+    "commons-lang3 v3.x API",
+    "compatible"
+  ],
+  [
+    "commons-text-api",
+    "commons-text API",
+    "compatible"
+  ],
+  [
+    "workflow-step-api",
+    "Pipeline Step API",
+    "compatible"
+  ],
+  [
+    "workflow-api",
+    "Pipeline API",
+    "compatible"
+  ],
+  [
+    "workflow-support",
+    "Pipeline Supporting APIs",
+    "compatible"
+  ],
+  [
+    "plugin-util-api",
+    "Utilities API",
+    "compatible"
+  ],
+  [
+    "font-awesome-api",
+    "Font Awesome API",
+    "compatible"
+  ],
+  [
+    "bootstrap5-api",
+    "Bootstrap 5 API",
+    "compatible"
+  ],
+  [
+    "prism-api",
+    "Prism API",
+    "compatible"
+  ],
+  [
+    "configuration-as-code",
+    "Configuration as Code",
+    "compatible"
+  ],
+  [
+    "bouncycastle-api",
+    "bouncycastle API",
+    "compatible"
+  ],
+  [
+    "okhttp-api",
+    "OkHttp",
+    "compatible"
+  ],
+  [
+    "ionicons-api",
+    "Ionicons API",
+    "compatible"
+  ],
+  [
+    "javax-activation-api",
+    "JavaBeans Activation Framework (JAF) API",
+    "compatible"
+  ],
+  [
+    "jaxb",
+    "JAXB plugin",
+    "compatible"
+  ],
+  [
+    "support-core",
+    "Support Core",
+    "compatible"
+  ],
+  [
+    "workflow-scm-step",
+    "Pipeline SCM Step",
+    "compatible"
+  ],
+  [
+    "workflow-cps",
+    "Pipeline Groovy",
+    "compatible"
+  ],
+  [
+    "eddsa-api",
+    "EDDSA API",
+    "compatible"
+  ],
+  [
+    "gson-api",
+    "Gson API",
+    "compatible"
+  ],
+  [
+    "trilead-api",
+    "Trilead API",
+    "compatible"
+  ],
+  [
+    "mina-sshd-api-common",
+    "Mina SSHD API :: Common",
+    "compatible"
+  ],
+  [
+    "mina-sshd-api-core",
+    "Mina SSHD API :: Core",
+    "compatible"
+  ],
+  [
+    "jakarta-activation-api",
+    "Jakarta Activation API",
+    "compatible"
+  ],
+  [
+    "jakarta-mail-api",
+    "Jakarta Mail API",
+    "compatible"
+  ],
+  [
+    "instance-identity",
+    "Instance Identity",
+    "compatible"
+  ],
+  [
+    "checks-api",
+    "Checks API plugin",
+    "compatible"
+  ],
+  [
+    "jquery3-api",
+    "JQuery3 API",
+    "compatible"
+  ],
+  [
+    "echarts-api",
+    "ECharts API",
+    "compatible"
+  ],
+  [
+    "matrix-project",
+    "Matrix Project",
+    "compatible"
+  ],
+  [
+    "workflow-job",
+    "Pipeline Job",
+    "compatible"
+  ],
+  [
+    "joda-time-api",
+    "Joda Time API",
+    "compatible"
+  ],
+  [
+    "pipeline-model-api",
+    "Pipeline Model API",
+    "compatible"
+  ],
+  [
+    "workflow-multibranch",
+    "Pipeline Multibranch",
+    "compatible"
+  ],
+  [
+    "pipeline-groovy-lib",
+    "Pipeline Groovy Libraries",
+    "compatible"
+  ],
+  [
+    "durable-task",
+    "Durable Task",
+    "compatible"
+  ],
+  [
+    "workflow-durable-task-step",
+    "Pipeline Nodes and Processes",
+    "compatible"
+  ],
+  [
+    "workflow-basic-steps",
+    "Pipeline Basic Steps",
+    "compatible"
+  ],
+  [
+    "pipeline-input-step",
+    "Pipeline Input Step",
+    "compatible"
+  ],
+  [
+    "pipeline-stage-step",
+    "Pipeline Stage Step",
+    "compatible"
+  ],
+  [
+    "pipeline-model-extensions",
+    "Pipeline Declarative Extension Points API",
+    "compatible"
+  ],
+  [
+    "pipeline-stage-tags-metadata",
+    "Pipeline Stage Tags Metadata",
+    "compatible"
+  ],
+  [
+    "pipeline-model-definition",
+    "Pipeline Declarative",
+    "compatible"
+  ],
+  [
+    "matrix-auth",
+    "Matrix Authorization Strategy",
+    "compatible"
+  ],
+  [
+    "mina-sshd-api-scp",
+    "Mina SSHD API :: SCP",
+    "compatible"
+  ],
+  [
+    "mina-sshd-api-sftp",
+    "Mina SSHD API :: SFTP",
+    "compatible"
+  ],
+  [
+    "jdk-tool",
+    "Oracle Java SE Development Kit Installer",
+    "compatible"
+  ],
+  [
+    "commons-compress-api",
+    "Commons Compress API",
+    "compatible"
+  ],
+  [
+    "jjwt-api",
+    "Java JSON Web Token (JJWT)",
+    "compatible"
+  ],
+  [
+    "unique-id",
+    "Unique ID Library",
+    "compatible"
+  ],
+  [
+    "handy-uri-templates-2-api",
+    "Handy Uri Templates 2.x API",
+    "compatible"
+  ],
+  [
+    "command-launcher",
+    "Command Agent Launcher",
+    "compatible"
+  ],
+  [
+    "javax-mail-api",
+    "JavaMail API",
+    "compatible"
+  ],
+  [
+    "kubernetes-client-api",
+    "Kubernetes Client API",
+    "compatible"
+  ],
+  [
+    "docker-commons",
+    "Docker Commons",
+    "compatible"
+  ],
+  [
+    "oauth-credentials",
+    "OAuth Credentials plugin",
+    "compatible"
+  ],
+  [
+    "google-oauth-plugin",
+    "Google OAuth Credentials plugin",
+    "compatible"
+  ],
+  [
+    "kubernetes-credentials",
+    "Kubernetes Credentials",
+    "compatible"
+  ],
+  [
+    "ace-editor",
+    "JavaScript GUI Lib: ACE Editor bundle plugin",
+    "compatible"
+  ],
+  [
+    "active-directory",
+    "Active Directory plugin",
+    "compatible"
+  ],
+  [
+    "apache-httpcomponents-client-5-api",
+    "Apache HttpComponents Client 5.x API",
+    "compatible"
+  ],
+  [
+    "analysis-model-api",
+    "Analysis Model API",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk2-core",
+    "Amazon Web Services SDK 2 :: Core",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk-minimal",
+    "Amazon Web Services SDK :: Minimal",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk2-ec2",
+    "Amazon Web Services SDK 2 :: EC2",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk-ec2",
+    "Amazon Web Services SDK :: EC2",
+    "compatible"
+  ],
+  [
+    "aws-credentials",
+    "AWS Credentials",
+    "compatible"
+  ],
+  [
+    "aws-global-configuration",
+    "AWS Global Configuration",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk-elasticbeanstalk",
+    "Amazon Web Services SDK :: Elastic Beanstalk",
+    "compatible"
+  ],
+  [
+    "blueocean-commons",
+    "Common API for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-rest",
+    "REST API for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "pubsub-light",
+    "Pub-Sub \"light\" Bus",
+    "compatible"
+  ],
+  [
+    "blueocean-pipeline-scm-api",
+    "Pipeline SCM API for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-jwt",
+    "JWT for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "jenkins-design-language",
+    "Design Language",
+    "compatible"
+  ],
+  [
+    "blueocean-core-js",
+    "Blue Ocean Core JS",
+    "compatible"
+  ],
+  [
+    "blueocean-web",
+    "Web for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "favorite",
+    "Favorite",
+    "compatible"
+  ],
+  [
+    "blueocean-rest-impl",
+    "REST Implementation for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "github-api",
+    "GitHub API",
+    "compatible"
+  ],
+  [
+    "github",
+    "GitHub plugin",
+    "compatible"
+  ],
+  [
+    "htmlpublisher",
+    "HTML Publisher plugin",
+    "compatible"
+  ],
+  [
+    "pipeline-build-step",
+    "Pipeline Build Step",
+    "compatible"
+  ],
+  [
+    "pipeline-graph-analysis",
+    "Pipeline Graph Analysis",
+    "compatible"
+  ],
+  [
+    "blueocean-pipeline-api-impl",
+    "Pipeline implementation for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "cloudbees-bitbucket-branch-source",
+    "Bitbucket Branch Source",
+    "compatible"
+  ],
+  [
+    "blueocean-bitbucket-pipeline",
+    "Bitbucket Pipeline for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-config",
+    "Config API for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-dashboard",
+    "Dashboard for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "sse-gateway",
+    "Server Sent Events (SSE) Gateway",
+    "compatible"
+  ],
+  [
+    "blueocean-events",
+    "Events API for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-git-pipeline",
+    "Git Pipeline for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-github-pipeline",
+    "GitHub Pipeline for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-i18n",
+    "i18n for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-personalization",
+    "Personalization for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "blueocean-pipeline-editor",
+    "Blue Ocean Pipeline Editor",
+    "compatible"
+  ],
+  [
+    "blueocean-display-url",
+    "Display URL for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "pipeline-milestone-step",
+    "Pipeline Milestone Step",
+    "compatible"
+  ],
+  [
+    "blueocean",
+    "Blue Ocean",
+    "compatible"
+  ],
+  [
+    "jersey2-api",
+    "Jersey 2 API",
+    "compatible"
+  ],
+  [
+    "gitlab-api",
+    "GitLab API",
+    "compatible"
+  ],
+  [
+    "gitlab-branch-source",
+    "GitLab Branch Source",
+    "compatible"
+  ],
+  [
+    "data-tables-api",
+    "DataTables.net API",
+    "compatible"
+  ],
+  [
+    "forensics-api",
+    "Forensics API",
+    "compatible"
+  ],
+  [
+    "dashboard-view",
+    "Dashboard View",
+    "compatible"
+  ],
+  [
+    "warnings-ng",
+    "Warnings",
+    "compatible"
+  ],
+  [
+    "jacoco",
+    "JaCoCo plugin",
+    "compatible"
+  ],
+  [
+    "gcp-java-sdk-storage",
+    "Google Cloud Platform SDK :: Storage",
+    "compatible"
+  ],
+  [
+    "cloudbees-jenkins-advisor",
+    "Health Advisor by CloudBees",
+    "compatible"
+  ],
+  [
+    "node-iterator-api",
+    "Node Iterator API",
+    "compatible"
+  ],
+  [
+    "pipeline-rest-api",
+    "Pipeline REST API",
+    "compatible"
+  ],
+  [
+    "pipeline-stage-view",
+    "Pipeline Stage View",
+    "compatible"
+  ],
+  [
+    "copyartifact",
+    "Copy Artifact",
+    "compatible"
+  ],
+  [
+    "docker-workflow",
+    "Docker Pipeline",
+    "compatible"
+  ],
+  [
+    "dockerhub-notification",
+    "CloudBees Docker Hub/Registry Notification",
+    "compatible"
+  ],
+  [
+    "ec2",
+    "Amazon EC2 plugin",
+    "compatible"
+  ],
+  [
+    "electricflow",
+    "CloudBees CD",
+    "compatible"
+  ],
+  [
+    "email-ext",
+    "Email Extension",
+    "compatible"
+  ],
+  [
+    "sshd",
+    "SSH server",
+    "compatible"
+  ],
+  [
+    "jsch",
+    "JSch dependency plugin",
+    "compatible"
+  ],
+  [
+    "google-compute-engine",
+    "Google Compute Engine",
+    "compatible"
+  ],
+  [
+    "google-kubernetes-engine",
+    "Google Kubernetes Engine",
+    "compatible"
+  ],
+  [
+    "google-metadata-plugin",
+    "Google Metadata plugin",
+    "compatible"
+  ],
+  [
+    "google-storage-plugin",
+    "Google Cloud Storage plugin",
+    "compatible"
+  ],
+  [
+    "jsoup",
+    "jsoup API",
+    "compatible"
+  ],
+  [
+    "nodejs",
+    "NodeJS",
+    "compatible"
+  ],
+  [
+    "oic-auth",
+    "OpenId Connect Authentication",
+    "compatible"
+  ],
+  [
+    "pipeline-github-lib",
+    "Pipeline GitHub Groovy Libraries",
+    "compatible"
+  ],
+  [
+    "pipeline-maven-api",
+    "Pipeline Maven API",
+    "compatible"
+  ],
+  [
+    "pipeline-maven",
+    "Pipeline Maven Integration",
+    "compatible"
+  ],
+  [
+    "popper2-api",
+    "Popper.js 2 API",
+    "compatible"
+  ],
+  [
+    "s3",
+    "S3 publisher plugin",
+    "compatible"
+  ],
+  [
+    "ssh-agent",
+    "SSH Agent",
+    "compatible"
+  ],
+  [
+    "suppress-stack-trace",
+    "Stack Trace Suppression (deprecated)",
+    "compatible"
+  ],
+  [
+    "workflow-aggregator",
+    "Pipeline",
+    "compatible"
+  ]
+]

@@ -1,0 +1,207 @@
+[
+  [
+    "asm-api",
+    "ASM API",
+    "verified"
+  ],
+  [
+    "json-api",
+    "JSON Api",
+    "verified"
+  ],
+  [
+    "structs",
+    "Structs",
+    "verified"
+  ],
+  [
+    "scm-api",
+    "SCM API",
+    "verified"
+  ],
+  [
+    "script-security",
+    "Script Security",
+    "verified"
+  ],
+  [
+    "antisamy-markup-formatter",
+    "OWASP Markup Formatter",
+    "verified"
+  ],
+  [
+    "snakeyaml-api",
+    "SnakeYAML API",
+    "verified"
+  ],
+  [
+    "credentials",
+    "Credentials",
+    "verified"
+  ],
+  [
+    "authentication-tokens",
+    "Authentication Tokens API",
+    "verified"
+  ],
+  [
+    "variant",
+    "Variant",
+    "verified"
+  ],
+  [
+    "jackson2-api",
+    "Jackson 2 API",
+    "verified"
+  ],
+  [
+    "metrics",
+    "Metrics",
+    "verified"
+  ],
+  [
+    "plain-credentials",
+    "Plain Credentials",
+    "verified"
+  ],
+  [
+    "ssh-credentials",
+    "SSH Credentials",
+    "verified"
+  ],
+  [
+    "credentials-binding",
+    "Credentials Binding",
+    "verified"
+  ],
+  [
+    "git-client",
+    "Git client",
+    "verified"
+  ],
+  [
+    "display-url-api",
+    "Display URL API",
+    "verified"
+  ],
+  [
+    "mailer",
+    "Mailer",
+    "verified"
+  ],
+  [
+    "junit",
+    "JUnit",
+    "verified"
+  ],
+  [
+    "json-path-api",
+    "JSON Path API",
+    "verified"
+  ],
+  [
+    "token-macro",
+    "Token Macro",
+    "verified"
+  ],
+  [
+    "git",
+    "Git",
+    "verified"
+  ],
+  [
+    "declarative-pipeline-migration-assistant-api",
+    "Declarative Pipeline Migration Assistant API",
+    "verified"
+  ],
+  [
+    "cloudbees-folder",
+    "Folders",
+    "verified"
+  ],
+  [
+    "branch-api",
+    "Branch API",
+    "verified"
+  ],
+  [
+    "mapdb-api",
+    "MapDB API",
+    "verified"
+  ],
+  [
+    "kubernetes",
+    "Kubernetes",
+    "verified"
+  ],
+  [
+    "ant",
+    "Ant",
+    "verified"
+  ],
+  [
+    "artifact-manager-s3",
+    "Artifact Manager on S3",
+    "verified"
+  ],
+  [
+    "github-branch-source",
+    "GitHub Branch Source",
+    "verified"
+  ],
+  [
+    "config-file-provider",
+    "Config File Provider",
+    "verified"
+  ],
+  [
+    "declarative-pipeline-migration-assistant",
+    "Declarative Pipeline Migration Assistant",
+    "verified"
+  ],
+  [
+    "git-server",
+    "Git server",
+    "verified"
+  ],
+  [
+    "gradle",
+    "Gradle",
+    "verified"
+  ],
+  [
+    "javadoc",
+    "Javadoc",
+    "verified"
+  ],
+  [
+    "ldap",
+    "LDAP",
+    "verified"
+  ],
+  [
+    "oidc-provider",
+    "OpenID Connect Provider",
+    "verified"
+  ],
+  [
+    "saml",
+    "SAML",
+    "verified"
+  ],
+  [
+    "secure-requester-whitelist",
+    "Secure Requester Whitelist",
+    "verified"
+  ],
+  [
+    "ssh-slaves",
+    "SSH Build Agents",
+    "verified"
+  ],
+  [
+    "timestamper",
+    "Timestamper",
+    "verified"
+  ]
+]
