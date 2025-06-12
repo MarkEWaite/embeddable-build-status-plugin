@@ -165,5 +165,6 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
 ## Docker builds
 
+[![Core](https://ci.jenkins.io/job/Packaging/job/docker/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Packaging/job/docker/job/master/)
 [![Agent](https://ci.jenkins.io/job/Packaging/job/docker-agent/job/master/badge/icon?subject=Agent)](https://ci.jenkins.io/job/Packaging/job/docker-agent/job/master/)
 [![SSH Agent](https://ci.jenkins.io/job/Packaging/job/docker-ssh-agent/job/master/badge/icon?subject=SSH+Agent)](https://ci.jenkins.io/job/Packaging/job/docker-ssh-agent/job/master/)
