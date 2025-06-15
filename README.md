@@ -159,12 +159,27 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
 [![Basic branch build strategies](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master/badge/icon?subject=Basic+branch+build+strategies)](https://ci.jenkins.io/job/Plugins/job/basic-branch-build-strategies-plugin/job/master)
 
-## Jobs
+## Health checks
 
 [![CI Agents](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/badge/icon?subject=CI+Agents)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-agent-availability/)
+[![CI Maven cache](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-maven-cache/badge/icon?subject=CI+Maven+cache)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/check-maven-cache/)
+[![CI apt LTS](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-debian-package/badge/icon?subject=CI+apt++LTS)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-debian-package/)
+[![CI apt latest](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-debian-deb/badge/icon?subject=CI+apt+latest)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-debian-deb/)
+[![CI rpm LTS](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-redhat-rpm/badge/icon?subject=CI+rpm+LTS)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-redhat-rpm/)
+[![CI rpm latest](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-redhat-rpm/badge/icon?subject=CI+rpm+latest)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-redhat-rpm/)
+[![Update center](https://ci.jenkins.io/job/Infra/job/update-center2/job/master/badge/icon?subject=Update+center)](https://ci.jenkins.io/job/Infra/job/update-center2/job/master/)
 
 ## Docker builds
 
-[![Core](https://ci.jenkins.io/job/Packaging/job/docker/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Packaging/job/docker/job/master/)
 [![Agent](https://ci.jenkins.io/job/Packaging/job/docker-agent/job/master/badge/icon?subject=Agent)](https://ci.jenkins.io/job/Packaging/job/docker-agent/job/master/)
+[![Core](https://ci.jenkins.io/job/Packaging/job/docker/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Packaging/job/docker/job/master/)
 [![SSH Agent](https://ci.jenkins.io/job/Packaging/job/docker-ssh-agent/job/master/badge/icon?subject=SSH+Agent)](https://ci.jenkins.io/job/Packaging/job/docker-ssh-agent/job/master/)
+
+## Documentation builds
+
+[![Extension indexer](https://ci.jenkins.io/job/Infra/job/backend-extension-indexer/job/master/badge/icon?subject=Extension+indexer)](https://ci.jenkins.io/job/Infra/job/backend-extension-indexer/job/master/)
+[![Javadoc](https://ci.jenkins.io/job/Infra/job/javadoc/job/main/badge/icon?subject=Javadoc)](https://ci.jenkins.io/job/Infra/job/javadoc/job/main/)
+[![Pipeline metadata](https://ci.jenkins.io/job/Infra/job/pipeline-metadata-utils/job/master/badge/icon?subject=Pipeline+metadata)](https://ci.jenkins.io/job/Infra/job/pipeline-metadata-utils/job/master/)
+[![Pipeline steps](https://ci.jenkins.io/job/Infra/job/pipeline-steps-doc-generator/job/master/badge/icon?subject=Pipeline+steps)](https://ci.jenkins.io/job/Infra/job/pipeline-steps-doc-generator/job/master/)
+[![docs.jenkins.io](https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/badge/icon?subject=docs.jenkins.io)](https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/)
+[![jenkins.io](https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/badge/icon?subject=jenkins.io)](https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/)
