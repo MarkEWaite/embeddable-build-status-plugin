@@ -96,7 +96,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![LDAP](https://ci.jenkins.io/job/Plugins/job/ldap-plugin/job/master/badge/icon?subject=LDAP)](https://ci.jenkins.io/job/Plugins/job/ldap-plugin/job/master)
 [![Mailer](https://ci.jenkins.io/job/Plugins/job/mailer-plugin/job/master/badge/icon?subject=Mailer)](https://ci.jenkins.io/job/Plugins/job/mailer-plugin/job/master)
 [![MapDB](https://ci.jenkins.io/job/Plugins/job/mapdb-api-plugin/job/master/badge/icon?subject=MapDB)](https://ci.jenkins.io/job/Plugins/job/mapdb-api-plugin/job/master)
-[![Matrix Authorization](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/master/badge/icon?subject=Matrix+Authorization)](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/master)
+[![Matrix Authorization](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/main/badge/icon?subject=Matrix+Authorization)](https://ci.jenkins.io/job/Plugins/job/matrix-auth-plugin/job/main)
 [![Matrix Project](https://ci.jenkins.io/job/Plugins/job/matrix-project-plugin/job/master/badge/icon?subject=Matrix+Project)](https://ci.jenkins.io/job/Plugins/job/matrix-project-plugin/job/master)
 [![Metrics](https://ci.jenkins.io/job/Plugins/job/metrics-plugin/job/master/badge/icon?subject=Metrics)](https://ci.jenkins.io/job/Plugins/job/metrics-plugin/job/master)
 [![Mina SSHD](https://ci.jenkins.io/job/Plugins/job/mina-sshd-api-plugin/job/main/badge/icon?subject=Mina+SSHD)](https://ci.jenkins.io/job/Plugins/job/mina-sshd-api-plugin/job/main)
