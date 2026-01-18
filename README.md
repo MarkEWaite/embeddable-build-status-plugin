@@ -168,6 +168,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![CI rpm LTS](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-redhat-rpm/badge/icon?subject=CI+rpm+LTS)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-lts-redhat-rpm/)
 [![CI rpm latest](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-redhat-rpm/badge/icon?subject=CI+rpm+latest)](https://ci.jenkins.io/job/Infra/job/acceptance-tests/job/install-latest-redhat-rpm/)
 [![Update center](https://ci.jenkins.io/job/Infra/job/update-center2/job/master/badge/icon?subject=Update+center)](https://ci.jenkins.io/job/Infra/job/update-center2/job/master/)
+[![Tool Crawler](https://ci.jenkins.io/job/Infra/job/crawler/job/main/badge/icon?subject=Tool+Crawler)](https://ci.jenkins.io/job/Infra/job/crawler/job/main/)
 
 ## Docker builds
 
