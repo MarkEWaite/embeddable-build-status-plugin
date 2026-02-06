@@ -90,11 +90,6 @@
     "verified"
   ],
   [
-    "junit",
-    "JUnit",
-    "verified"
-  ],
-  [
     "json-path-api",
     "JSON Path API",
     "verified"
@@ -135,18 +130,28 @@
     "verified"
   ],
   [
-    "ant",
-    "Ant",
-    "verified"
-  ],
-  [
     "artifact-manager-s3",
     "Artifact Manager on S3",
     "verified"
   ],
   [
+    "junit",
+    "JUnit",
+    "verified"
+  ],
+  [
     "github-branch-source",
     "GitHub Branch Source",
+    "verified"
+  ],
+  [
+    "saml",
+    "SAML",
+    "verified"
+  ],
+  [
+    "oic-auth",
+    "OpenId Connect Authentication",
     "verified"
   ],
   [
@@ -157,16 +162,6 @@
   [
     "declarative-pipeline-migration-assistant",
     "Declarative Pipeline Migration Assistant",
-    "verified"
-  ],
-  [
-    "git-server",
-    "Git server",
-    "verified"
-  ],
-  [
-    "gradle",
-    "Gradle",
     "verified"
   ],
   [
@@ -185,11 +180,6 @@
     "verified"
   ],
   [
-    "saml",
-    "SAML",
-    "verified"
-  ],
-  [
     "secure-requester-whitelist",
     "Secure Requester Whitelist",
     "verified"
@@ -197,11 +187,6 @@
   [
     "ssh-slaves",
     "SSH Build Agents",
-    "verified"
-  ],
-  [
-    "timestamper",
-    "Timestamper",
     "verified"
   ]
 ]

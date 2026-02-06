@@ -5,11 +5,6 @@
     "compatible"
   ],
   [
-    "caffeine-api",
-    "Caffeine API",
-    "compatible"
-  ],
-  [
     "commons-lang3-api",
     "commons-lang3 v3.x API",
     "compatible"
@@ -17,6 +12,16 @@
   [
     "commons-text-api",
     "commons-text API",
+    "compatible"
+  ],
+  [
+    "ionicons-api",
+    "Ionicons API",
+    "compatible"
+  ],
+  [
+    "caffeine-api",
+    "Caffeine API",
     "compatible"
   ],
   [
@@ -70,8 +75,13 @@
     "compatible"
   ],
   [
-    "ionicons-api",
-    "Ionicons API",
+    "jakarta-activation-api",
+    "Jakarta Activation API",
+    "compatible"
+  ],
+  [
+    "jakarta-xml-bind-api",
+    "Jakarta XML Binding API",
     "compatible"
   ],
   [
@@ -125,11 +135,6 @@
     "compatible"
   ],
   [
-    "jakarta-activation-api",
-    "Jakarta Activation API",
-    "compatible"
-  ],
-  [
     "jakarta-mail-api",
     "Jakarta Mail API",
     "compatible"
@@ -137,26 +142,6 @@
   [
     "instance-identity",
     "Instance Identity",
-    "compatible"
-  ],
-  [
-    "checks-api",
-    "Checks API plugin",
-    "compatible"
-  ],
-  [
-    "jquery3-api",
-    "JQuery3 API",
-    "compatible"
-  ],
-  [
-    "echarts-api",
-    "ECharts API",
-    "compatible"
-  ],
-  [
-    "matrix-project",
-    "Matrix Project",
     "compatible"
   ],
   [
@@ -230,6 +215,11 @@
     "compatible"
   ],
   [
+    "kubernetes-client-api",
+    "Kubernetes Client API",
+    "compatible"
+  ],
+  [
     "mina-sshd-api-scp",
     "Mina SSHD API :: SCP",
     "compatible"
@@ -275,8 +265,8 @@
     "compatible"
   ],
   [
-    "kubernetes-client-api",
-    "Kubernetes Client API",
+    "jquery3-api",
+    "JQuery3 API",
     "compatible"
   ],
   [
@@ -300,8 +290,8 @@
     "compatible"
   ],
   [
-    "ace-editor",
-    "JavaScript GUI Lib: ACE Editor bundle plugin",
+    "netty-api",
+    "Netty API",
     "compatible"
   ],
   [
@@ -315,6 +305,11 @@
     "compatible"
   ],
   [
+    "jsoup",
+    "jsoup API",
+    "compatible"
+  ],
+  [
     "analysis-model-api",
     "Analysis Model API",
     "compatible"
@@ -322,6 +317,16 @@
   [
     "aws-java-sdk2-core",
     "Amazon Web Services SDK 2 :: Core",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk2-s3",
+    "Amazon Web Services SDK 2 :: S3",
+    "compatible"
+  ],
+  [
+    "oss-symbols-api",
+    "Dev Tools Symbols API",
     "compatible"
   ],
   [
@@ -352,6 +357,16 @@
   [
     "aws-java-sdk-elasticbeanstalk",
     "Amazon Web Services SDK :: Elastic Beanstalk",
+    "compatible"
+  ],
+  [
+    "aws-java-sdk2-netty-nio-client",
+    "AWS Java SDK :: HTTP Clients :: Netty Non-Blocking I/O",
+    "compatible"
+  ],
+  [
+    "azure-sdk",
+    "Azure SDK API",
     "compatible"
   ],
   [
@@ -395,6 +410,16 @@
     "compatible"
   ],
   [
+    "checks-api",
+    "Checks API plugin",
+    "compatible"
+  ],
+  [
+    "echarts-api",
+    "ECharts API",
+    "compatible"
+  ],
+  [
     "favorite",
     "Favorite",
     "compatible"
@@ -432,6 +457,11 @@
   [
     "blueocean-pipeline-api-impl",
     "Pipeline implementation for Blue Ocean",
+    "compatible"
+  ],
+  [
+    "commons-collections4-api",
+    "commons-collections4 v4.x API Wrapper",
     "compatible"
   ],
   [
@@ -505,8 +535,8 @@
     "compatible"
   ],
   [
-    "jersey2-api",
-    "Jersey 2 API",
+    "jersey3-api",
+    "Jersey 3 API",
     "compatible"
   ],
   [
@@ -527,11 +557,6 @@
   [
     "forensics-api",
     "Forensics API",
-    "compatible"
-  ],
-  [
-    "dashboard-view",
-    "Dashboard View",
     "compatible"
   ],
   [
@@ -570,23 +595,18 @@
     "compatible"
   ],
   [
+    "ec2",
+    "Amazon EC2 plugin",
+    "compatible"
+  ],
+  [
     "copyartifact",
     "Copy Artifact",
     "compatible"
   ],
   [
-    "docker-workflow",
-    "Docker Pipeline",
-    "compatible"
-  ],
-  [
     "dockerhub-notification",
     "CloudBees Docker Hub/Registry Notification",
-    "compatible"
-  ],
-  [
-    "ec2",
-    "Amazon EC2 plugin",
     "compatible"
   ],
   [
@@ -600,11 +620,6 @@
     "compatible"
   ],
   [
-    "sshd",
-    "SSH server",
-    "compatible"
-  ],
-  [
     "jsch",
     "JSch dependency plugin",
     "compatible"
@@ -615,33 +630,18 @@
     "compatible"
   ],
   [
-    "google-kubernetes-engine",
-    "Google Kubernetes Engine",
+    "jersey2-api",
+    "Jersey 2 API",
     "compatible"
   ],
   [
-    "google-metadata-plugin",
-    "Google Metadata plugin",
-    "compatible"
-  ],
-  [
-    "google-storage-plugin",
-    "Google Cloud Storage plugin",
-    "compatible"
-  ],
-  [
-    "jsoup",
-    "jsoup API",
+    "mcp-server",
+    "MCP Server",
     "compatible"
   ],
   [
     "nodejs",
     "NodeJS",
-    "compatible"
-  ],
-  [
-    "oic-auth",
-    "OpenId Connect Authentication",
     "compatible"
   ],
   [
@@ -660,11 +660,6 @@
     "compatible"
   ],
   [
-    "popper2-api",
-    "Popper.js 2 API",
-    "compatible"
-  ],
-  [
     "s3",
     "S3 publisher plugin",
     "compatible"
@@ -675,8 +670,8 @@
     "compatible"
   ],
   [
-    "suppress-stack-trace",
-    "Stack Trace Suppression (deprecated)",
+    "sshd",
+    "SSH server",
     "compatible"
   ],
   [
