@@ -2,9 +2,9 @@
 
 Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
-[![asm-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fasm-api-plugin%2Fmain)&subject=ASM%20API](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main/)
-[![json-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fjson-api-plugin%2Fmain)&subject=JSON%20Api](https://ci.jenkins.io/job/Plugins/job/json-api-plugin/job/main/)
-[![structs](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fstructs-plugin%2Fmaster)&subject=Structs](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master/)
+[![asm-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fasm-api-plugin%2Fmain&subject=ASM%20API](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/main/)
+[![json-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fjson-api-plugin%2Fmain&subject=JSON%20Api](https://ci.jenkins.io/job/Plugins/job/json-api-plugin/job/main/)
+[![structs](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fstructs-plugin%2Fmaster&subject=Structs](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master/)
 
 [![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%25%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
