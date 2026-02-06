@@ -35,7 +35,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![secure-requester-whitelist](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsecure-requester-whitelist-plugin%2Fmaster&subject=Secure%20Requester%20Whitelist)](https://ci.jenkins.io/job/Plugins/job/secure-requester-whitelist-plugin/job/master/)
 [![snakeyaml-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsnakeyaml-api-plugin%2Fmaster&subject=SnakeYAML%20API)](https://ci.jenkins.io/job/Plugins/job/snakeyaml-api-plugin/job/master/)
 [![ssh-credentials](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fssh-credentials-plugin%2Fmaster&subject=SSH%20Credentials)](https://ci.jenkins.io/job/Plugins/job/ssh-credentials-plugin/job/master/)
-[![ssh-slaves](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fssh-slaves-plugin%2Fmaster&subject=SSH%20Build%20Agents)](https://ci.jenkins.io/job/Plugins/job/ssh-slaves-plugin/job/master/)
+[![ssh-agents](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fssh-agents-plugin%2Fmain&subject=SSH%20Build%20Agents)](https://ci.jenkins.io/job/Plugins/job/ssh-agents-plugin/job/main/)
 [![structs](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fstructs-plugin%2Fmaster&subject=Structs)](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master/)
 [![token-macro](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Ftoken-macro-plugin%2Fmain&subject=Token%20Macro)](https://ci.jenkins.io/job/Plugins/job/token-macro-plugin/job/main/)
 [![variant](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fvariant-plugin%2Fmaster&subject=Variant)](https://ci.jenkins.io/job/Plugins/job/variant-plugin/job/master/)
