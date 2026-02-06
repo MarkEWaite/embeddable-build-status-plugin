@@ -2,6 +2,10 @@
 
 Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
+[![asm-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fasm-api-plugin%2Fmaster)&subject=ASM%20API](https://ci.jenkins.io/job/Plugins/job/asm-api-plugin/job/master/)
+[![json-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fjson-api-plugin%2Fmaster)&subject=JSON%20Api](https://ci.jenkins.io/job/Plugins/job/json-api-plugin/job/master/)
+[![structs](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fstructs-plugin%2Fmaster)&subject=Structs](https://ci.jenkins.io/job/Plugins/job/structs-plugin/job/master/)
+
 [![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%25%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
