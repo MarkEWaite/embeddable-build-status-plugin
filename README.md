@@ -2,7 +2,7 @@
 
 Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 
-[![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%252Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
+[![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%25%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
 [![Remoting](https://ci.jenkins.io/job/Core/job/remoting/job/master/badge/icon?subject=Remoting)](https://ci.jenkins.io/job/Core/job/remoting/job/master/)
