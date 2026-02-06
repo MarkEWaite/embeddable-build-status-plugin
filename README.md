@@ -1,7 +1,3 @@
-# Plugin Status on [ci.jenkins.io](https://ci.jenkins.io)
-
-Embeddable build status links to ci.jenkins.io for core, plugins, and more.
-
 ## Verified
 
 [![antisamy-markup-formatter](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fantisamy-markup-formatter-plugin%2Fmaster&subject=OWASP%20Markup%20Formatter)](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master/)
@@ -157,19 +153,19 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![pipeline-model-extensions](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-model-extensions-plugin%2Fmaster&subject=Pipeline%20Declarative%20Extension%20Points%20API)](https://ci.jenkins.io/job/Plugins/job/pipeline-model-extensions-plugin/job/master/)
 [![pipeline-rest-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-rest-api-plugin%2Fmaster&subject=Pipeline%20REST%20API)](https://ci.jenkins.io/job/Plugins/job/pipeline-rest-api-plugin/job/master/)
 [![pipeline-stage-step](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-stage-step-plugin%2Fmaster&subject=Pipeline%20Stage%20Step)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-step-plugin/job/master/)
-[![pipeline-stage-tags-metadata](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-stage-tags-metadata-plugin%2Fmaster&subject=Pipeline%20Stage%20Tags%20Metadata)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-tags-metadata-plugin/job/master/)
+[![pipeline-stage-tags-metadata](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-stage-tags-metadata-plugin%2Fmain&subject=Pipeline%20Stage%20Tags%20Metadata)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-tags-metadata-plugin/job/main/)
 [![pipeline-stage-view](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpipeline-stage-view-plugin%2Fmaster&subject=Pipeline%20Stage%20View)](https://ci.jenkins.io/job/Plugins/job/pipeline-stage-view-plugin/job/master/)
 [![plugin-util-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fplugin-util-api-plugin%2Fmaster&subject=Utilities%20API)](https://ci.jenkins.io/job/Plugins/job/plugin-util-api-plugin/job/master/)
-[![prism-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fprism-api-plugin%2Fmaster&subject=Prism%20API)](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/master/)
+[![prism-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fprism-api-plugin%2Fmain&subject=Prism%20API)](https://ci.jenkins.io/job/Plugins/job/prism-api-plugin/job/main/)
 [![pubsub-light](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fpubsub-light-plugin%2Fmaster&subject=Pub-Sub%20%22light%22%20Bus)](https://ci.jenkins.io/job/Plugins/job/pubsub-light-plugin/job/master/)
 [![s3](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fs3-plugin%2Fmaster&subject=S3%20publisher%20plugin)](https://ci.jenkins.io/job/Plugins/job/s3-plugin/job/master/)
 [![sse-gateway](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsse-gateway-plugin%2Fmaster&subject=Server%20Sent%20Events%20%28SSE%29%20Gateway)](https://ci.jenkins.io/job/Plugins/job/sse-gateway-plugin/job/master/)
 [![ssh-agent](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fssh-agent-plugin%2Fmaster&subject=SSH%20Agent)](https://ci.jenkins.io/job/Plugins/job/ssh-agent-plugin/job/master/)
-[![sshd](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsshd-plugin%2Fmaster&subject=SSH%20server)](https://ci.jenkins.io/job/Plugins/job/sshd-plugin/job/master/)
+[![sshd](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsshd-plugin%2Fmain&subject=SSH%20server)](https://ci.jenkins.io/job/Plugins/job/sshd-plugin/job/main/)
 [![support-core](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fsupport-core-plugin%2Fmaster&subject=Support%20Core)](https://ci.jenkins.io/job/Plugins/job/support-core-plugin/job/master/)
-[![trilead-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Ftrilead-api-plugin%2Fmaster&subject=Trilead%20API)](https://ci.jenkins.io/job/Plugins/job/trilead-api-plugin/job/master/)
+[![trilead-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Ftrilead-api-plugin%2Fmain&subject=Trilead%20API)](https://ci.jenkins.io/job/Plugins/job/trilead-api-plugin/job/main/)
 [![unique-id](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Funique-id-plugin%2Fmaster&subject=Unique%20ID%20Library)](https://ci.jenkins.io/job/Plugins/job/unique-id-plugin/job/master/)
-[![warnings-ng](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fwarnings-ng-plugin%2Fmaster&subject=Warnings)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/master/)
+[![warnings-ng](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fwarnings-ng-plugin%2Fmain&subject=Warnings)](https://ci.jenkins.io/job/Plugins/job/warnings-ng-plugin/job/main/)
 [![workflow-aggregator](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fworkflow-aggregator-plugin%2Fmaster&subject=Pipeline)](https://ci.jenkins.io/job/Plugins/job/workflow-aggregator-plugin/job/master/)
 [![workflow-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fworkflow-api-plugin%2Fmaster&subject=Pipeline%20API)](https://ci.jenkins.io/job/Plugins/job/workflow-api-plugin/job/master/)
 [![workflow-basic-steps](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fworkflow-basic-steps-plugin%2Fmaster&subject=Pipeline%20Basic%20Steps)](https://ci.jenkins.io/job/Plugins/job/workflow-basic-steps-plugin/job/master/)
@@ -181,6 +177,7 @@ Embeddable build status links to ci.jenkins.io for core, plugins, and more.
 [![workflow-step-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fworkflow-step-api-plugin%2Fmaster&subject=Pipeline%20Step%20API)](https://ci.jenkins.io/job/Plugins/job/workflow-step-api-plugin/job/master/)
 [![workflow-support](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fworkflow-support-plugin%2Fmaster&subject=Pipeline%20Supporting%20APIs)](https://ci.jenkins.io/job/Plugins/job/workflow-support-plugin/job/master/)
 
+## Core
 
 [![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%25%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
