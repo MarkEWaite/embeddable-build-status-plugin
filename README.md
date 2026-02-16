@@ -1,6 +1,6 @@
 ## Experiments
 
-[![Build Status](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%2Fmaster)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
+[![core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 
 ## Verified
 
@@ -58,25 +58,6 @@
 [![aws-java-sdk2-netty-nio-client](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Faws-java-sdk2-netty-nio-client-plugin%2Fmaster&subject=AWS%20Java%20SDK%20%3A%3A%20HTTP%20Clients%20%3A%3A%20Netty%20Non-Blocking%20I/O)](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk2-netty-nio-client-plugin/job/master/)
 [![aws-java-sdk2-s3](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Faws-java-sdk2-s3-plugin%2Fmaster&subject=Amazon%20Web%20Services%20SDK%202%20%3A%3A%20S3)](https://ci.jenkins.io/job/Plugins/job/aws-java-sdk2-s3-plugin/job/master/)
 [![azure-sdk](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fazure-sdk-plugin%2Fmaster&subject=Azure%20SDK%20API)](https://ci.jenkins.io/job/Plugins/job/azure-sdk-plugin/job/master/)
-[![blueocean](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-plugin%2Fmaster&subject=Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-plugin/job/master/)
-[![blueocean-bitbucket-pipeline](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-bitbucket-pipeline-plugin%2Fmaster&subject=Bitbucket%20Pipeline%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-bitbucket-pipeline-plugin/job/master/)
-[![blueocean-commons](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-commons-plugin%2Fmaster&subject=Common%20API%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-commons-plugin/job/master/)
-[![blueocean-config](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-config-plugin%2Fmaster&subject=Config%20API%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-config-plugin/job/master/)
-[![blueocean-core-js](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-core-js-plugin%2Fmaster&subject=Blue%20Ocean%20Core%20JS)](https://ci.jenkins.io/job/Plugins/job/blueocean-core-js-plugin/job/master/)
-[![blueocean-dashboard](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-dashboard-plugin%2Fmaster&subject=Dashboard%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-dashboard-plugin/job/master/)
-[![blueocean-display-url](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-display-url-plugin%2Fmaster&subject=Display%20URL%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-display-url-plugin/job/master/)
-[![blueocean-events](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-events-plugin%2Fmaster&subject=Events%20API%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-events-plugin/job/master/)
-[![blueocean-git-pipeline](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-git-pipeline-plugin%2Fmaster&subject=Git%20Pipeline%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-git-pipeline-plugin/job/master/)
-[![blueocean-github-pipeline](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-github-pipeline-plugin%2Fmaster&subject=GitHub%20Pipeline%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-github-pipeline-plugin/job/master/)
-[![blueocean-i18n](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-i18n-plugin%2Fmaster&subject=i18n%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-i18n-plugin/job/master/)
-[![blueocean-jwt](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-jwt-plugin%2Fmaster&subject=JWT%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-jwt-plugin/job/master/)
-[![blueocean-personalization](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-personalization-plugin%2Fmaster&subject=Personalization%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-personalization-plugin/job/master/)
-[![blueocean-pipeline-api-impl](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-pipeline-api-impl-plugin%2Fmaster&subject=Pipeline%20implementation%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-pipeline-api-impl-plugin/job/master/)
-[![blueocean-pipeline-editor](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-pipeline-editor-plugin%2Fmaster&subject=Blue%20Ocean%20Pipeline%20Editor)](https://ci.jenkins.io/job/Plugins/job/blueocean-pipeline-editor-plugin/job/master/)
-[![blueocean-pipeline-scm-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-pipeline-scm-api-plugin%2Fmaster&subject=Pipeline%20SCM%20API%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-pipeline-scm-api-plugin/job/master/)
-[![blueocean-rest](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-rest-plugin%2Fmaster&subject=REST%20API%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-rest-plugin/job/master/)
-[![blueocean-rest-impl](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-rest-impl-plugin%2Fmaster&subject=REST%20Implementation%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-rest-impl-plugin/job/master/)
-[![blueocean-web](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fblueocean-web-plugin%2Fmaster&subject=Web%20for%20Blue%20Ocean)](https://ci.jenkins.io/job/Plugins/job/blueocean-web-plugin/job/master/)
 [![bootstrap5-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fbootstrap5-api-plugin%2Fmaster&subject=Bootstrap%205%20API)](https://ci.jenkins.io/job/Plugins/job/bootstrap5-api-plugin/job/master/)
 [![bouncycastle-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fbouncycastle-api-plugin%2Fmaster&subject=bouncycastle%20API)](https://ci.jenkins.io/job/Plugins/job/bouncycastle-api-plugin/job/master/)
 [![caffeine-api](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fcaffeine-api-plugin%2Fmaster&subject=Caffeine%20API)](https://ci.jenkins.io/job/Plugins/job/caffeine-api-plugin/job/master/)
