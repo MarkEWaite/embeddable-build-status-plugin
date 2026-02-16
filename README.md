@@ -1,3 +1,7 @@
+## Experiments
+
+[![Build Status](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%2Fmaster)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
+
 ## Verified
 
 [![antisamy-markup-formatter](https://ci.jenkins.io/buildStatus/icon?job=Plugins%2Fantisamy-markup-formatter-plugin%2Fmaster&subject=OWASP%20Markup%20Formatter)](https://ci.jenkins.io/job/Plugins/job/antisamy-markup-formatter-plugin/job/master/)
