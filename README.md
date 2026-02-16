@@ -178,6 +178,8 @@
 
 ## Core
 
+[![Build Status](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%2Fmaster)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
+
 [![Core](https://ci.jenkins.io/buildStatus/icon?job=Core%2Fjenkins%25%2Fmaster&subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![Core](https://ci.jenkins.io/job/Core/job/jenkins/job/master/badge/icon?subject=Core)](https://ci.jenkins.io/job/Core/job/jenkins/job/master/)
 [![ATH](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/badge/icon?subject=ATH)](https://ci.jenkins.io/job/Core/job/acceptance-test-harness/job/master/)
