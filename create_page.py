@@ -63,7 +63,8 @@ def process_directories(heading, classification, f, directories):
             continue
         basedir = os.path.basename(repo_path)
         basedir_pluses = basedir.replace("-plugin", "").replace("_Plugin", "").replace("-", "+").replace("_", "+")
-        if basedir == "bom":
+        exclusions = [ "bom", "jenkins-core-changelog-generator", "release"]
+        if basedir in exclusions:
             continue
         url = f"[![Build Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch}&subject={basedir_pluses})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)"
 
