@@ -1,6 +1,12 @@
 #! /usr/bin/python3
 
 # Create the embeddable build status markdown page for repositories I track.
+#
+# File content is based on my repository structure
+#
+# Use python create_page.py to update README.md
+# Use python create_page.py PLUGINS.md to update PLUGINS.md
+# Use python create_page.py TOP-250.md to update TOP-250.md
 
 import subprocess
 import os
