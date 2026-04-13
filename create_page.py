@@ -4,6 +4,7 @@
 
 import subprocess
 import os
+import sys
 
 from pathlib import Path
 
@@ -46,10 +47,10 @@ def list_directories(path_to_search, upper_bound = -1):
 
     return [path_to_search + "/" + s for s in directories[:upper_bound]]
 
-def process_directories(heading, classification, directories):
-    print("")
-    print(f"## {heading}")
-    print("")
+def process_directories(heading, classification, f, directories):
+    print("", file=f)
+    print(f"## {heading}", file=f)
+    print("", file=f)
 
     for repo_path in directories:
         if not os.path.isdir(repo_path):
@@ -66,14 +67,20 @@ def process_directories(heading, classification, directories):
             continue
         url = f"[![Build Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch}&subject={basedir_pluses})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)"
 
-        print(f"{url}")
+        print(f"{url}", file=f)
 
 if __name__ == "__main__":
-    process_directories("My Plugins",      "Plugins",             list_directories("/home/mwaite/hub/my-plugins", 3))
-    process_directories("Core",            "Core",                list_directories("/home/mwaite/hub/core", 3))
-    process_directories("Packaging",       "Packaging",           list_directories("/home/mwaite/hub/packaging", 3))
-    process_directories("Tools",           "Tools",               list_directories("/home/mwaite/hub/tools", 3))
-    process_directories("Orphan Plugins",  "Plugins",             list_directories("/home/mwaite/hub/orphans", 3))
-    process_directories("Top 250 Plugins", "Plugins",             list_directories("/home/mwaite/all/popular-250", 3))
-    process_directories("Maven Plugins",   "Plugins",             list_directories("/home/mwaite/hub/maven-plugins", 3))
-    process_directories("Libraries",       "jenkinsci-libraries", list_directories("/home/mwaite/hub/libraries", 3))
+    dest = "README.md"
+    if len(sys.argv) > 1:
+        dest = sys.argv[1]
+    with open(dest, "w") as f:
+        if dest == "README.md":
+            process_directories("Core",            "Core",                f, list_directories("/home/mwaite/hub/core"))
+            process_directories("Packaging",       "Packaging",           f, list_directories("/home/mwaite/hub/packaging"))
+            process_directories("Tools",           "Tools",               f, list_directories("/home/mwaite/hub/tools"))
+            process_directories("Maven Plugins",   "Plugins",             f, list_directories("/home/mwaite/hub/maven-plugins"))
+            process_directories("Libraries",       "jenkinsci-libraries", f, list_directories("/home/mwaite/hub/libraries"))
+        else:
+            process_directories("My Plugins",      "Plugins",             f, list_directories("/home/mwaite/hub/my-plugins"))
+            process_directories("Orphan Plugins",  "Plugins",             f, list_directories("/home/mwaite/hub/orphans"))
+            process_directories("Top 250 Plugins", "Plugins",             f, list_directories("/home/mwaite/all/popular-250"))
