@@ -66,9 +66,7 @@ def process_directories(heading, classification, f, directories):
         exclusions = [ "bom", "jenkins-core-changelog-generator", "release"]
         if basedir in exclusions:
             continue
-        url = f"[![Build Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch}&subject={basedir_pluses})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)"
-
-        print(f"{url}", file=f)
+        print(f"[![Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch}&subject={basedir_pluses})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)", file=f)
 
 if __name__ == "__main__":
     dest = "README.md"
