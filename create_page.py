@@ -79,7 +79,8 @@ if __name__ == "__main__":
             process_directories("Tools",           "Tools",               f, list_directories("/home/mwaite/hub/tools"))
             process_directories("Maven Plugins",   "Plugins",             f, list_directories("/home/mwaite/hub/maven-plugins"))
             process_directories("Libraries",       "jenkinsci-libraries", f, list_directories("/home/mwaite/hub/libraries"))
-        else:
+        elif dest == "PLUGINS.md":
             process_directories("My Plugins",      "Plugins",             f, list_directories("/home/mwaite/hub/my-plugins"))
             process_directories("Orphan Plugins",  "Plugins",             f, list_directories("/home/mwaite/hub/orphans"))
+        else:
             process_directories("Top 250 Plugins", "Plugins",             f, list_directories("/home/mwaite/all/popular-250"))
