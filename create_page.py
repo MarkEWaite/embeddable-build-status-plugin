@@ -72,9 +72,9 @@ def process_directories(heading, classification, f, directories):
         url, branch = get_git_upstream_info(repo_path)
         if not url:
             continue
-        branch_quoted = quote_plus(branch)
+        branch_quoted = quote_plus(quote_plus(branch)) # Must be double encoded per build status plugin docs
         print("url is " +  url + ", quoted branch is " + branch_quoted)
-        print(f"[![Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch_quoted}&subject={basedir_quoted})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)", file=f)
+        print(f"[![Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch_quoted}&subject={basedir_quoted})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch_quoted}/)", file=f)
 
 if __name__ == "__main__":
     dest = "README.md"
