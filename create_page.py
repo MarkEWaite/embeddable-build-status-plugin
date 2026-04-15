@@ -13,6 +13,7 @@ import os
 import sys
 
 from pathlib import Path
+from urllib.parse import quote_plus
 
 def get_git_upstream_info(repo_path):
     """
@@ -63,16 +64,17 @@ def process_directories(heading, classification, f, directories):
             continue
         if not os.path.isdir(os.path.join(repo_path, ".git")):
             continue
+        basedir = os.path.basename(repo_path)
+        if basedir in [ "bom", "jenkins-core-changelog-generator", "release"]:
+            continue
+        basedir_quoted = quote_plus(basedir.replace("-plugin", "").replace("_Plugin", "").replace("-", " ").replace("_", " "))
 
         url, branch = get_git_upstream_info(repo_path)
         if not url:
             continue
-        basedir = os.path.basename(repo_path)
-        basedir_pluses = basedir.replace("-plugin", "").replace("_Plugin", "").replace("-", "+").replace("_", "+")
-        exclusions = [ "bom", "jenkins-core-changelog-generator", "release"]
-        if basedir in exclusions:
-            continue
-        print(f"[![Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch}&subject={basedir_pluses})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)", file=f)
+        branch_quoted = quote_plus(branch)
+        print("url is " +  url + ", quoted branch is " + branch_quoted)
+        print(f"[![Status](https://ci.jenkins.io/buildStatus/icon?job={classification}%2F{basedir}%2F{branch_quoted}&subject={basedir_quoted})](https://ci.jenkins.io/job/{classification}/job/{basedir}/job/{branch}/)", file=f)
 
 if __name__ == "__main__":
     dest = "README.md"
